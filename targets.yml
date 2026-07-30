@@ -1,0 +1,60 @@
+# Targets.
+#
+# `contribution` targets are open source projects where a pull request from a
+# stranger is a normal contribution rather than an intrusion. These are cloned
+# and patches are drafted against real files.
+#
+# `benchmark` targets are commercial APIs. They are scored to give the numbers
+# a reference point and nothing is ever proposed against them, because nobody
+# asked us to review their documentation.
+#
+# Every URL verified to return 200 on the date noted.
+
+targets:
+  - name: mcp-spec
+    kind: contribution
+    repo: https://github.com/modelcontextprotocol/modelcontextprotocol.git
+    ref: main
+    verified: 2026-07-30
+    prose:
+      - "docs/**/*.mdx"
+      - "docs/**/*.md"
+      - "README.md"
+    json_schema:
+      - schema/2026-07-28/schema.json
+
+  - name: mcp-python-sdk
+    kind: contribution
+    repo: https://github.com/modelcontextprotocol/python-sdk.git
+    ref: main
+    verified: 2026-07-30
+    prose:
+      - "README.md"
+      - "docs/**/*.md"
+      - "examples/**/*.md"
+
+  - name: mcp-typescript-sdk
+    kind: contribution
+    repo: https://github.com/modelcontextprotocol/typescript-sdk.git
+    ref: main
+    verified: 2026-07-30
+    prose:
+      - "README.md"
+      - "docs/**/*.md"
+
+  # Reference point only. Stripe's reference documentation is widely held up as
+  # best in class, so its score is what "good" looks like on this scale.
+  - name: stripe
+    kind: benchmark
+    spec: https://raw.githubusercontent.com/stripe/openapi/master/openapi/spec3.yaml
+    verified: 2026-07-30
+
+settings:
+  min_spec_bytes: 1024
+  fetch_timeout_seconds: 60
+  gate_timeout_seconds: 300
+  max_links_per_target: 80
+  # Cap on drafted patches per target per run. A reviewer works through a
+  # queue; they do not work through a hundred.
+  max_proposals_per_target: 20
+  link_timeout_seconds: 15

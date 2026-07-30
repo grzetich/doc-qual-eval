@@ -1,0 +1,78 @@
+name: Documentation monitor
+
+# Runs the free gates daily and commits the proposal queue. Nothing is ever
+# opened automatically: the workflow's job ends at producing patches for a
+# human to read.
+
+on:
+  schedule:
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - "targets.yml"
+      - "monitor/**"
+      - "run_monitor.py"
+      - ".github/workflows/monitor.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: docs-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Install artie
+        # Pinned to a ref rather than floating: an unpinned scorer would
+        # silently change what is being measured, which makes the trend
+        # meaningless.
+        run: pip install "git+https://github.com/grzetich/artie-cli.git@main"
+
+      - name: Install Vale
+        uses: errata-ai/vale-action@reviewdog
+        continue-on-error: true
+        with:
+          version: 3.12.0
+          files: README.md
+          fail_on_error: false
+
+      - name: Run monitor
+        run: python run_monitor.py --threshold 7
+
+      - name: Commit reports
+        if: always()
+        run: |
+          git config user.name "docs-quality-monitor"
+          git config user.email "actions@github.com"
+          git add reports/
+          if git diff --staged --quiet; then
+            echo "No changes."
+          else
+            git commit -m "monitor: $(date -u +%Y-%m-%d) [skip ci]"
+            git push
+          fi
+
+      - name: Upload reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reports-${{ github.run_number }}
+          path: reports/
+          retention-days: 30
