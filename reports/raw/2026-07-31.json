@@ -1,17 +1,17 @@
 {
-  "run_at": "2026-07-31T01:22:30+00:00",
+  "run_at": "2026-07-31T12:59:30+00:00",
   "threshold": 7.0,
   "generation": false,
   "targets": [
     {
       "name": "mcp-spec",
       "type": "contribution",
-      "revision": "41d9e93",
+      "revision": "7376311",
       "gates": [
         {
           "gate": "checkout",
           "status": "ok",
-          "summary": "cloned at 41d9e93"
+          "summary": "cloned at 7376311"
         },
         {
           "gate": "links",
@@ -187,23 +187,6 @@
       "target": "mcp-spec",
       "gate": "links",
       "kind": "redirected_link",
-      "message": "https://www.rfc-editor.org/rfc/rfc7591 redirects to https://www.rfc-editor.org/info/rfc7591/ (same host, resource preserved, canonical form of the same page)",
-      "tier": "draftable",
-      "path": "docs/community/interest-groups/auth.mdx",
-      "line": 18,
-      "evidence": {
-        "url": "https://www.rfc-editor.org/rfc/rfc7591",
-        "final": "https://www.rfc-editor.org/info/rfc7591/",
-        "status": 200,
-        "verdict": "safe",
-        "reason": "same host, resource preserved, canonical form of the same page"
-      },
-      "id": "4ad1aa264e"
-    },
-    {
-      "target": "mcp-spec",
-      "gate": "links",
-      "kind": "redirected_link",
       "message": "https://www.rfc-editor.org/rfc/rfc9728 redirects to https://www.rfc-editor.org/info/rfc9728/ (same host, resource preserved, canonical form of the same page)",
       "tier": "draftable",
       "path": "docs/community/interest-groups/auth.mdx",
@@ -216,6 +199,23 @@
         "reason": "same host, resource preserved, canonical form of the same page"
       },
       "id": "f03e5080f2"
+    },
+    {
+      "target": "mcp-spec",
+      "gate": "links",
+      "kind": "redirected_link",
+      "message": "https://www.rfc-editor.org/rfc/rfc7591 redirects to https://www.rfc-editor.org/info/rfc7591/ (same host, resource preserved, canonical form of the same page)",
+      "tier": "draftable",
+      "path": "docs/community/interest-groups/auth.mdx",
+      "line": 18,
+      "evidence": {
+        "url": "https://www.rfc-editor.org/rfc/rfc7591",
+        "final": "https://www.rfc-editor.org/info/rfc7591/",
+        "status": 200,
+        "verdict": "safe",
+        "reason": "same host, resource preserved, canonical form of the same page"
+      },
+      "id": "4ad1aa264e"
     },
     {
       "target": "mcp-spec",
@@ -323,23 +323,6 @@
       "target": "mcp-python-sdk",
       "gate": "links",
       "kind": "redirected_link",
-      "message": "https://modelcontextprotocol.io/specification/latest redirects to https://modelcontextprotocol.io/specification/2026-07-28 (same host, resource preserved, canonical form of the same page)",
-      "tier": "draftable",
-      "path": "README.md",
-      "line": 129,
-      "evidence": {
-        "url": "https://modelcontextprotocol.io/specification/latest",
-        "final": "https://modelcontextprotocol.io/specification/2026-07-28",
-        "status": 200,
-        "verdict": "safe",
-        "reason": "same host, resource preserved, canonical form of the same page"
-      },
-      "id": "ce0c0c90b7"
-    },
-    {
-      "target": "mcp-python-sdk",
-      "gate": "links",
-      "kind": "redirected_link",
       "message": "https://anyio.readthedocs.io/ redirects to https://anyio.readthedocs.io/en/stable/ (same host, resource preserved, canonical form of the same page)",
       "tier": "draftable",
       "path": "docs/get-started/installation.md",
@@ -352,6 +335,23 @@
         "reason": "same host, resource preserved, canonical form of the same page"
       },
       "id": "d676ebedb3"
+    },
+    {
+      "target": "mcp-python-sdk",
+      "gate": "links",
+      "kind": "redirected_link",
+      "message": "https://modelcontextprotocol.io/specification/latest redirects to https://modelcontextprotocol.io/specification/2026-07-28 (same host, resource preserved, canonical form of the same page)",
+      "tier": "draftable",
+      "path": "README.md",
+      "line": 129,
+      "evidence": {
+        "url": "https://modelcontextprotocol.io/specification/latest",
+        "final": "https://modelcontextprotocol.io/specification/2026-07-28",
+        "status": 200,
+        "verdict": "safe",
+        "reason": "same host, resource preserved, canonical form of the same page"
+      },
+      "id": "ce0c0c90b7"
     },
     {
       "target": "mcp-python-sdk",
@@ -391,23 +391,6 @@
       "target": "mcp-python-sdk",
       "gate": "links",
       "kind": "redirected_link",
-      "message": "https://rich.readthedocs.io/ redirects to https://rich.readthedocs.io/en/stable/ (same host, resource preserved, canonical form of the same page)",
-      "tier": "draftable",
-      "path": "docs/get-started/installation.md",
-      "line": 42,
-      "evidence": {
-        "url": "https://rich.readthedocs.io/",
-        "final": "https://rich.readthedocs.io/en/stable/",
-        "status": 200,
-        "verdict": "safe",
-        "reason": "same host, resource preserved, canonical form of the same page"
-      },
-      "id": "99d9bc1796"
-    },
-    {
-      "target": "mcp-python-sdk",
-      "gate": "links",
-      "kind": "redirected_link",
       "message": "https://opentelemetry-python.readthedocs.io/ redirects to https://opentelemetry-python.readthedocs.io/en/latest/ (same host, resource preserved, canonical form of the same page)",
       "tier": "draftable",
       "path": "docs/get-started/installation.md",
@@ -425,18 +408,18 @@
       "target": "mcp-python-sdk",
       "gate": "links",
       "kind": "redirected_link",
-      "message": "https://modelcontextprotocol.io/specification/latest/server/resources redirects to https://modelcontextprotocol.io/specification/2026-07-28/server/resources (same host, resource preserved, canonical form of the same page)",
+      "message": "https://rich.readthedocs.io/ redirects to https://rich.readthedocs.io/en/stable/ (same host, resource preserved, canonical form of the same page)",
       "tier": "draftable",
-      "path": "docs/servers/uri-templates.md",
-      "line": 16,
+      "path": "docs/get-started/installation.md",
+      "line": 42,
       "evidence": {
-        "url": "https://modelcontextprotocol.io/specification/latest/server/resources",
-        "final": "https://modelcontextprotocol.io/specification/2026-07-28/server/resources",
+        "url": "https://rich.readthedocs.io/",
+        "final": "https://rich.readthedocs.io/en/stable/",
         "status": 200,
         "verdict": "safe",
         "reason": "same host, resource preserved, canonical form of the same page"
       },
-      "id": "f25a934431"
+      "id": "99d9bc1796"
     },
     {
       "target": "mcp-python-sdk",
@@ -459,18 +442,32 @@
       "target": "mcp-python-sdk",
       "gate": "links",
       "kind": "redirected_link",
-      "message": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/2133 redirects to https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2133 (same host, resource preserved, canonical form of the same page)",
+      "message": "https://modelcontextprotocol.io/specification/latest/server/resources redirects to https://modelcontextprotocol.io/specification/2026-07-28/server/resources (same host, resource preserved, canonical form of the same page)",
       "tier": "draftable",
-      "path": "examples/stories/apps/README.md",
-      "line": 36,
+      "path": "docs/servers/uri-templates.md",
+      "line": 16,
       "evidence": {
-        "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/2133",
-        "final": "https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2133",
+        "url": "https://modelcontextprotocol.io/specification/latest/server/resources",
+        "final": "https://modelcontextprotocol.io/specification/2026-07-28/server/resources",
         "status": 200,
         "verdict": "safe",
         "reason": "same host, resource preserved, canonical form of the same page"
       },
-      "id": "9bc777a632"
+      "id": "f25a934431"
+    },
+    {
+      "target": "mcp-python-sdk",
+      "gate": "links",
+      "kind": "dead_link",
+      "message": "https://modelcontextprotocol.io/specification/draft/extensions/apps returns 404",
+      "tier": "review_only",
+      "path": "examples/stories/apps/README.md",
+      "line": 35,
+      "evidence": {
+        "url": "https://modelcontextprotocol.io/specification/draft/extensions/apps",
+        "status": 404
+      },
+      "id": "3a5e9834db"
     },
     {
       "target": "mcp-python-sdk",
@@ -506,6 +503,23 @@
     {
       "target": "mcp-python-sdk",
       "gate": "links",
+      "kind": "redirected_link",
+      "message": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/2133 redirects to https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2133 (same host, resource preserved, canonical form of the same page)",
+      "tier": "draftable",
+      "path": "examples/stories/apps/README.md",
+      "line": 36,
+      "evidence": {
+        "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/2133",
+        "final": "https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2133",
+        "status": 200,
+        "verdict": "safe",
+        "reason": "same host, resource preserved, canonical form of the same page"
+      },
+      "id": "9bc777a632"
+    },
+    {
+      "target": "mcp-python-sdk",
+      "gate": "links",
       "kind": "dead_link",
       "message": "https://modelcontextprotocol.io/specification/draft/extensions/events returns 404",
       "tier": "review_only",
@@ -516,37 +530,6 @@
         "status": 404
       },
       "id": "f9cb0cb340"
-    },
-    {
-      "target": "mcp-python-sdk",
-      "gate": "links",
-      "kind": "dead_link",
-      "message": "https://modelcontextprotocol.io/specification/draft/extensions/apps returns 404",
-      "tier": "review_only",
-      "path": "examples/stories/apps/README.md",
-      "line": 35,
-      "evidence": {
-        "url": "https://modelcontextprotocol.io/specification/draft/extensions/apps",
-        "status": 404
-      },
-      "id": "3a5e9834db"
-    },
-    {
-      "target": "mcp-typescript-sdk",
-      "gate": "links",
-      "kind": "redirected_link",
-      "message": "https://modelcontextprotocol.io/docs redirects to https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro (same host, resource preserved, canonical form of the same page)",
-      "tier": "draftable",
-      "path": "README.md",
-      "line": 152,
-      "evidence": {
-        "url": "https://modelcontextprotocol.io/docs",
-        "final": "https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro",
-        "status": 200,
-        "verdict": "safe",
-        "reason": "same host, resource preserved, canonical form of the same page"
-      },
-      "id": "b48e0cff86"
     },
     {
       "target": "mcp-typescript-sdk",
@@ -564,6 +547,23 @@
         "reason": "same host, resource preserved, canonical form of the same page"
       },
       "id": "3b892475dd"
+    },
+    {
+      "target": "mcp-typescript-sdk",
+      "gate": "links",
+      "kind": "redirected_link",
+      "message": "https://modelcontextprotocol.io/docs redirects to https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro (same host, resource preserved, canonical form of the same page)",
+      "tier": "draftable",
+      "path": "README.md",
+      "line": 152,
+      "evidence": {
+        "url": "https://modelcontextprotocol.io/docs",
+        "final": "https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro",
+        "status": 200,
+        "verdict": "safe",
+        "reason": "same host, resource preserved, canonical form of the same page"
+      },
+      "id": "b48e0cff86"
     }
   ],
   "proposals": [
@@ -584,20 +584,20 @@
       "verification": "Requested https://nodejs.org/, followed redirects to https://nodejs.org/en (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
     },
     {
-      "finding_id": "4ad1aa264e",
-      "target": "mcp-spec",
-      "path": "docs/community/interest-groups/auth.mdx",
-      "diff": "--- a/docs/community/interest-groups/auth.mdx\n+++ b/docs/community/interest-groups/auth.mdx\n@@ -15,7 +15,7 @@\n \n ### In Scope\n \n-- **Deployment experience reports**: how implementers have integrated the current authorization spec (OAuth 2.1, [RFC 9728](https://www.rfc-editor.org/rfc/rfc9728) Protected Resource Metadata, [RFC 7591](https://www.rfc-editor.org/rfc/rfc7591) Dynamic Client Registration, Client ID Metadata Documents) with real authorization servers, and where it falls short\n+- **Deployment experience reports**: how implementers have integrated the current authorization spec (OAuth 2.1, [RFC 9728](https://www.rfc-editor.org/rfc/rfc9728) Protected Resource Metadata, [RFC 7591](https://www.rfc-editor.org/info/rfc7591/) Dynamic Client Registration, Client ID Metadata Documents) with real authorization servers, and where it falls short\n - **Enterprise identity integration**: requirements and friction points when connecting MCP servers to enterprise IdPs (Okta, Entra ID, Ping, Keycloak, etc.), including SSO, tenant isolation, and admin consent flows\n - **Delegated and agentic access**: use cases for on-behalf-of token exchange, downstream resource access, audience restriction, and consent when an MCP client acts through chains of agents or tools\n - **Scope and permission granularity**: whether and how MCP servers should advertise fine-grained scopes (per-tool, per-resource) and how clients should request and present them\n",
-      "rationale": "The documented URL redirects. Pointing it at the resolved location removes a hop and survives the redirect being retired.",
-      "verification": "Requested https://www.rfc-editor.org/rfc/rfc7591, followed redirects to https://www.rfc-editor.org/info/rfc7591/ (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
-    },
-    {
       "finding_id": "f03e5080f2",
       "target": "mcp-spec",
       "path": "docs/community/interest-groups/auth.mdx",
       "diff": "--- a/docs/community/interest-groups/auth.mdx\n+++ b/docs/community/interest-groups/auth.mdx\n@@ -15,7 +15,7 @@\n \n ### In Scope\n \n-- **Deployment experience reports**: how implementers have integrated the current authorization spec (OAuth 2.1, [RFC 9728](https://www.rfc-editor.org/rfc/rfc9728) Protected Resource Metadata, [RFC 7591](https://www.rfc-editor.org/rfc/rfc7591) Dynamic Client Registration, Client ID Metadata Documents) with real authorization servers, and where it falls short\n+- **Deployment experience reports**: how implementers have integrated the current authorization spec (OAuth 2.1, [RFC 9728](https://www.rfc-editor.org/info/rfc9728/) Protected Resource Metadata, [RFC 7591](https://www.rfc-editor.org/rfc/rfc7591) Dynamic Client Registration, Client ID Metadata Documents) with real authorization servers, and where it falls short\n - **Enterprise identity integration**: requirements and friction points when connecting MCP servers to enterprise IdPs (Okta, Entra ID, Ping, Keycloak, etc.), including SSO, tenant isolation, and admin consent flows\n - **Delegated and agentic access**: use cases for on-behalf-of token exchange, downstream resource access, audience restriction, and consent when an MCP client acts through chains of agents or tools\n - **Scope and permission granularity**: whether and how MCP servers should advertise fine-grained scopes (per-tool, per-resource) and how clients should request and present them\n",
       "rationale": "The documented URL redirects. Pointing it at the resolved location removes a hop and survives the redirect being retired.",
       "verification": "Requested https://www.rfc-editor.org/rfc/rfc9728, followed redirects to https://www.rfc-editor.org/info/rfc9728/ (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
+    },
+    {
+      "finding_id": "4ad1aa264e",
+      "target": "mcp-spec",
+      "path": "docs/community/interest-groups/auth.mdx",
+      "diff": "--- a/docs/community/interest-groups/auth.mdx\n+++ b/docs/community/interest-groups/auth.mdx\n@@ -15,7 +15,7 @@\n \n ### In Scope\n \n-- **Deployment experience reports**: how implementers have integrated the current authorization spec (OAuth 2.1, [RFC 9728](https://www.rfc-editor.org/rfc/rfc9728) Protected Resource Metadata, [RFC 7591](https://www.rfc-editor.org/rfc/rfc7591) Dynamic Client Registration, Client ID Metadata Documents) with real authorization servers, and where it falls short\n+- **Deployment experience reports**: how implementers have integrated the current authorization spec (OAuth 2.1, [RFC 9728](https://www.rfc-editor.org/rfc/rfc9728) Protected Resource Metadata, [RFC 7591](https://www.rfc-editor.org/info/rfc7591/) Dynamic Client Registration, Client ID Metadata Documents) with real authorization servers, and where it falls short\n - **Enterprise identity integration**: requirements and friction points when connecting MCP servers to enterprise IdPs (Okta, Entra ID, Ping, Keycloak, etc.), including SSO, tenant isolation, and admin consent flows\n - **Delegated and agentic access**: use cases for on-behalf-of token exchange, downstream resource access, audience restriction, and consent when an MCP client acts through chains of agents or tools\n - **Scope and permission granularity**: whether and how MCP servers should advertise fine-grained scopes (per-tool, per-resource) and how clients should request and present them\n",
+      "rationale": "The documented URL redirects. Pointing it at the resolved location removes a hop and survives the redirect being retired.",
+      "verification": "Requested https://www.rfc-editor.org/rfc/rfc7591, followed redirects to https://www.rfc-editor.org/info/rfc7591/ (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
     },
     {
       "finding_id": "d65f6a95f4",
@@ -616,20 +616,20 @@
       "verification": "Requested https://modelcontextprotocol.io, followed redirects to https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
     },
     {
-      "finding_id": "ce0c0c90b7",
-      "target": "mcp-python-sdk",
-      "path": "README.md",
-      "diff": "--- a/README.md\n+++ b/README.md\n@@ -126,4 +126,4 @@\n [protocol-badge]: https://img.shields.io/badge/protocol-modelcontextprotocol.io-blue.svg\n [protocol-url]: https://modelcontextprotocol.io\n [spec-badge]: https://img.shields.io/badge/spec-spec.modelcontextprotocol.io-blue.svg\n-[spec-url]: https://modelcontextprotocol.io/specification/latest\n+[spec-url]: https://modelcontextprotocol.io/specification/2026-07-28\n",
-      "rationale": "The documented URL redirects. Pointing it at the resolved location removes a hop and survives the redirect being retired.",
-      "verification": "Requested https://modelcontextprotocol.io/specification/latest, followed redirects to https://modelcontextprotocol.io/specification/2026-07-28 (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
-    },
-    {
       "finding_id": "d676ebedb3",
       "target": "mcp-python-sdk",
       "path": "docs/get-started/installation.md",
       "diff": "--- a/docs/get-started/installation.md\n+++ b/docs/get-started/installation.md\n@@ -26,7 +26,7 @@\n You don't need to know any of this to use the SDK, but if you're wondering what each dependency is for:\n \n * `mcp-types`: every protocol type (requests, results, content blocks) as its own package, versioned in lockstep with the SDK. Code that depends on `mcp` imports it through the `mcp.types` alias (every `from mcp.types import ...` in these docs); import `mcp_types` directly only in a project that installs `mcp-types` without the SDK.\n-* [`anyio`](https://anyio.readthedocs.io/): the async runtime. The whole SDK is written against anyio, so it runs on either `asyncio` or `trio`.\n+* [`anyio`](https://anyio.readthedocs.io/en/stable/): the async runtime. The whole SDK is written against anyio, so it runs on either `asyncio` or `trio`.\n * [`pydantic`](https://docs.pydantic.dev/): what every `mcp.types` model is built on, plus all schema generation and validation.\n * [`httpx2`](https://pypi.org/project/httpx2/): the HTTP client behind the Streamable HTTP and SSE *client* transports, with server-sent events support built in.\n * [`starlette`](https://www.starlette.io/), [`uvicorn`](https://www.uvicorn.org/), [`sse-starlette`](https://pypi.org/project/sse-starlette/), and [`python-multipart`](https://pypi.org/project/python-multipart/): the HTTP *server* transports.\n",
       "rationale": "The documented URL redirects. Pointing it at the resolved location removes a hop and survives the redirect being retired.",
       "verification": "Requested https://anyio.readthedocs.io/, followed redirects to https://anyio.readthedocs.io/en/stable/ (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
+    },
+    {
+      "finding_id": "ce0c0c90b7",
+      "target": "mcp-python-sdk",
+      "path": "README.md",
+      "diff": "--- a/README.md\n+++ b/README.md\n@@ -126,4 +126,4 @@\n [protocol-badge]: https://img.shields.io/badge/protocol-modelcontextprotocol.io-blue.svg\n [protocol-url]: https://modelcontextprotocol.io\n [spec-badge]: https://img.shields.io/badge/spec-spec.modelcontextprotocol.io-blue.svg\n-[spec-url]: https://modelcontextprotocol.io/specification/latest\n+[spec-url]: https://modelcontextprotocol.io/specification/2026-07-28\n",
+      "rationale": "The documented URL redirects. Pointing it at the resolved location removes a hop and survives the redirect being retired.",
+      "verification": "Requested https://modelcontextprotocol.io/specification/latest, followed redirects to https://modelcontextprotocol.io/specification/2026-07-28 (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
     },
     {
       "finding_id": "b168171a30",
@@ -640,20 +640,20 @@
       "verification": "Requested https://typing-extensions.readthedocs.io/, followed redirects to https://typing-extensions.readthedocs.io/en/latest/ (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
     },
     {
-      "finding_id": "99d9bc1796",
-      "target": "mcp-python-sdk",
-      "path": "docs/get-started/installation.md",
-      "diff": "--- a/docs/get-started/installation.md\n+++ b/docs/get-started/installation.md\n@@ -39,4 +39,4 @@\n ## Optional extras\n \n * `mcp[cli]` adds [`typer`](https://typer.tiangolo.com/) and [`python-dotenv`](https://pypi.org/project/python-dotenv/) for the `mcp` command-line tool (`mcp dev`, `mcp run`, `mcp install`). You'll want this during development; you may not need it in a deployed server.\n-* `mcp[rich]` adds [`rich`](https://rich.readthedocs.io/) for nicer server logs.\n+* `mcp[rich]` adds [`rich`](https://rich.readthedocs.io/en/stable/) for nicer server logs.\n",
-      "rationale": "The documented URL redirects. Pointing it at the resolved location removes a hop and survives the redirect being retired.",
-      "verification": "Requested https://rich.readthedocs.io/, followed redirects to https://rich.readthedocs.io/en/stable/ (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
-    },
-    {
       "finding_id": "41c25f8393",
       "target": "mcp-python-sdk",
       "path": "docs/get-started/installation.md",
       "diff": "--- a/docs/get-started/installation.md\n+++ b/docs/get-started/installation.md\n@@ -32,7 +32,7 @@\n * [`starlette`](https://www.starlette.io/), [`uvicorn`](https://www.uvicorn.org/), [`sse-starlette`](https://pypi.org/project/sse-starlette/), and [`python-multipart`](https://pypi.org/project/python-multipart/): the HTTP *server* transports.\n * [`jsonschema`](https://pypi.org/project/jsonschema/): validates a tool's structured output against its declared output schema.\n * [`pyjwt[crypto]`](https://pyjwt.readthedocs.io/): OAuth token handling for authorization.\n-* [`opentelemetry-api`](https://opentelemetry-python.readthedocs.io/): just the lightweight API, so the SDK's tracing middleware costs nothing unless you install an OpenTelemetry SDK and exporter yourself.\n+* [`opentelemetry-api`](https://opentelemetry-python.readthedocs.io/en/latest/): just the lightweight API, so the SDK's tracing middleware costs nothing unless you install an OpenTelemetry SDK and exporter yourself.\n * [`typing-extensions`](https://typing-extensions.readthedocs.io/) and [`typing-inspection`](https://pypi.org/project/typing-inspection/): modern typing features on Python 3.10.\n * [`pywin32`](https://pypi.org/project/pywin32/): Windows only, used for `stdio` subprocess management.\n \n",
       "rationale": "The documented URL redirects. Pointing it at the resolved location removes a hop and survives the redirect being retired.",
       "verification": "Requested https://opentelemetry-python.readthedocs.io/, followed redirects to https://opentelemetry-python.readthedocs.io/en/latest/ (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
+    },
+    {
+      "finding_id": "99d9bc1796",
+      "target": "mcp-python-sdk",
+      "path": "docs/get-started/installation.md",
+      "diff": "--- a/docs/get-started/installation.md\n+++ b/docs/get-started/installation.md\n@@ -39,4 +39,4 @@\n ## Optional extras\n \n * `mcp[cli]` adds [`typer`](https://typer.tiangolo.com/) and [`python-dotenv`](https://pypi.org/project/python-dotenv/) for the `mcp` command-line tool (`mcp dev`, `mcp run`, `mcp install`). You'll want this during development; you may not need it in a deployed server.\n-* `mcp[rich]` adds [`rich`](https://rich.readthedocs.io/) for nicer server logs.\n+* `mcp[rich]` adds [`rich`](https://rich.readthedocs.io/en/stable/) for nicer server logs.\n",
+      "rationale": "The documented URL redirects. Pointing it at the resolved location removes a hop and survives the redirect being retired.",
+      "verification": "Requested https://rich.readthedocs.io/, followed redirects to https://rich.readthedocs.io/en/stable/ (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
     },
     {
       "finding_id": "f25a934431",
@@ -664,14 +664,6 @@
       "verification": "Requested https://modelcontextprotocol.io/specification/latest/server/resources, followed redirects to https://modelcontextprotocol.io/specification/2026-07-28/server/resources (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
     },
     {
-      "finding_id": "9bc777a632",
-      "target": "mcp-python-sdk",
-      "path": "examples/stories/apps/README.md",
-      "diff": "--- a/examples/stories/apps/README.md\n+++ b/examples/stories/apps/README.md\n@@ -33,7 +33,7 @@\n ## Spec\n \n [MCP Apps \u2014 extensions](https://modelcontextprotocol.io/specification/draft/extensions/apps)\n-\u00b7 [SEP-2133 \u2014 extensions capability](https://github.com/modelcontextprotocol/modelcontextprotocol/issues/2133)\n+\u00b7 [SEP-2133 \u2014 extensions capability](https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2133)\n \n ## See also\n \n",
-      "rationale": "The documented URL redirects. Pointing it at the resolved location removes a hop and survives the redirect being retired.",
-      "verification": "Requested https://github.com/modelcontextprotocol/modelcontextprotocol/issues/2133, followed redirects to https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2133 (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
-    },
-    {
       "finding_id": "2c67387f85",
       "target": "mcp-python-sdk",
       "path": "docs/handlers/sampling-and-roots.md",
@@ -680,12 +672,12 @@
       "verification": "Requested https://github.com/modelcontextprotocol/modelcontextprotocol/issues/2577, followed redirects to https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2577 (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
     },
     {
-      "finding_id": "b48e0cff86",
-      "target": "mcp-typescript-sdk",
-      "path": "README.md",
-      "diff": "--- a/README.md\n+++ b/README.md\n@@ -149,7 +149,7 @@\n - [Documentation site](https://ts.sdk.modelcontextprotocol.io/v2/) \u2014 the full guides: tools, resources, prompts, serving over HTTP and stdio, clients, OAuth, and migration\n - [Troubleshooting](docs/troubleshooting.md) \u2014 common errors and their fixes\n - [API reference](https://ts.sdk.modelcontextprotocol.io/v2/api/)\n-- [MCP documentation](https://modelcontextprotocol.io/docs)\n+- [MCP documentation](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)\n - [MCP specification](https://modelcontextprotocol.io/specification/latest)\n \n ### Building docs locally\n",
+      "finding_id": "9bc777a632",
+      "target": "mcp-python-sdk",
+      "path": "examples/stories/apps/README.md",
+      "diff": "--- a/examples/stories/apps/README.md\n+++ b/examples/stories/apps/README.md\n@@ -33,7 +33,7 @@\n ## Spec\n \n [MCP Apps \u2014 extensions](https://modelcontextprotocol.io/specification/draft/extensions/apps)\n-\u00b7 [SEP-2133 \u2014 extensions capability](https://github.com/modelcontextprotocol/modelcontextprotocol/issues/2133)\n+\u00b7 [SEP-2133 \u2014 extensions capability](https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2133)\n \n ## See also\n \n",
       "rationale": "The documented URL redirects. Pointing it at the resolved location removes a hop and survives the redirect being retired.",
-      "verification": "Requested https://modelcontextprotocol.io/docs, followed redirects to https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
+      "verification": "Requested https://github.com/modelcontextprotocol/modelcontextprotocol/issues/2133, followed redirects to https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2133 (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
     },
     {
       "finding_id": "3b892475dd",
@@ -694,6 +686,14 @@
       "diff": "--- a/README.md\n+++ b/README.md\n@@ -150,7 +150,7 @@\n - [Troubleshooting](docs/troubleshooting.md) \u2014 common errors and their fixes\n - [API reference](https://ts.sdk.modelcontextprotocol.io/v2/api/)\n - [MCP documentation](https://modelcontextprotocol.io/docs)\n-- [MCP specification](https://modelcontextprotocol.io/specification/latest)\n+- [MCP specification](https://modelcontextprotocol.io/specification/2026-07-28)\n \n ### Building docs locally\n \n",
       "rationale": "The documented URL redirects. Pointing it at the resolved location removes a hop and survives the redirect being retired.",
       "verification": "Requested https://modelcontextprotocol.io/specification/latest, followed redirects to https://modelcontextprotocol.io/specification/2026-07-28 (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
+    },
+    {
+      "finding_id": "b48e0cff86",
+      "target": "mcp-typescript-sdk",
+      "path": "README.md",
+      "diff": "--- a/README.md\n+++ b/README.md\n@@ -149,7 +149,7 @@\n - [Documentation site](https://ts.sdk.modelcontextprotocol.io/v2/) \u2014 the full guides: tools, resources, prompts, serving over HTTP and stdio, clients, OAuth, and migration\n - [Troubleshooting](docs/troubleshooting.md) \u2014 common errors and their fixes\n - [API reference](https://ts.sdk.modelcontextprotocol.io/v2/api/)\n-- [MCP documentation](https://modelcontextprotocol.io/docs)\n+- [MCP documentation](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)\n - [MCP specification](https://modelcontextprotocol.io/specification/latest)\n \n ### Building docs locally\n",
+      "rationale": "The documented URL redirects. Pointing it at the resolved location removes a hop and survives the redirect being retired.",
+      "verification": "Requested https://modelcontextprotocol.io/docs, followed redirects to https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
     }
   ]
 }
