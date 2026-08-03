@@ -1,6 +1,6 @@
 # Latest run
 
-Run at 2026-08-02T12:05:08+00:00 UTC.
+Run at 2026-08-03T13:43:57+00:00 UTC.
 
 16 patches drafted, 12 findings left for review, 0 findings deliberately not patched.
 
@@ -8,14 +8,14 @@ Run at 2026-08-02T12:05:08+00:00 UTC.
 
 | Target | Type | Revision | Gates |
 | --- | --- | --- | --- |
-| mcp-spec | contribution | 7376311 | checkout:ok, links:ok, prose:skipped, jsonschema:ok |
+| mcp-spec | contribution | e24f009 | checkout:ok, links:ok, prose:skipped, jsonschema:ok |
 | mcp-python-sdk | contribution | a4f4ccd | checkout:ok, links:ok, prose:skipped |
 | mcp-typescript-sdk | contribution | cc4b416 | checkout:ok, links:ok, prose:skipped |
 | stripe | benchmark |  | fetch:ok, artie:error |
 
 ## Drafted patches
 
-In `reports/proposals/2026-08-02/`. Nothing has been opened.
+In `reports/proposals/2026-08-03/`. Nothing has been opened.
 
 | ID | Target | File | Verified by |
 | --- | --- | --- | --- |
@@ -27,12 +27,12 @@ In `reports/proposals/2026-08-02/`. Nothing has been opened.
 | 57cdd41177 | mcp-python-sdk | README.md | Requested https://modelcontextprotocol.io, followed redirects to https://modelco |
 | ce0c0c90b7 | mcp-python-sdk | README.md | Requested https://modelcontextprotocol.io/specification/latest, followed redirec |
 | d676ebedb3 | mcp-python-sdk | docs/get-started/installation.md | Requested https://anyio.readthedocs.io/, followed redirects to https://anyio.rea |
-| b168171a30 | mcp-python-sdk | docs/get-started/installation.md | Requested https://typing-extensions.readthedocs.io/, followed redirects to https |
 | 41c25f8393 | mcp-python-sdk | docs/get-started/installation.md | Requested https://opentelemetry-python.readthedocs.io/, followed redirects to ht |
+| b168171a30 | mcp-python-sdk | docs/get-started/installation.md | Requested https://typing-extensions.readthedocs.io/, followed redirects to https |
 | 99d9bc1796 | mcp-python-sdk | docs/get-started/installation.md | Requested https://rich.readthedocs.io/, followed redirects to https://rich.readt |
 | f25a934431 | mcp-python-sdk | docs/servers/uri-templates.md | Requested https://modelcontextprotocol.io/specification/latest/server/resources, |
-| 9bc777a632 | mcp-python-sdk | examples/stories/apps/README.md | Requested https://github.com/modelcontextprotocol/modelcontextprotocol/issues/21 |
 | 2c67387f85 | mcp-python-sdk | docs/handlers/sampling-and-roots.md | Requested https://github.com/modelcontextprotocol/modelcontextprotocol/issues/25 |
+| 9bc777a632 | mcp-python-sdk | examples/stories/apps/README.md | Requested https://github.com/modelcontextprotocol/modelcontextprotocol/issues/21 |
 | b48e0cff86 | mcp-typescript-sdk | README.md | Requested https://modelcontextprotocol.io/docs, followed redirects to https://mo |
 | 3b892475dd | mcp-typescript-sdk | README.md | Requested https://modelcontextprotocol.io/specification/latest, followed redirec |
 
