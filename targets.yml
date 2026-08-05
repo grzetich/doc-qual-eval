@@ -1,16 +1,66 @@
-# Targets.
+# Generation profiles.
 #
-# `contribution` targets are open source projects where a pull request from a
-# stranger is a normal contribution rather than an intrusion. These are cloned
-# and patches are drafted against real files.
+# Everything protocol-specific lives here rather than in the scorer, so
+# pointing the generation gate at another project is an edit to this file.
+# A new language still needs code: extraction reads Python syntax trees, and
+# the gate declines rather than guessing when the profile says otherwise.
 #
-# `benchmark` targets are commercial APIs. They are scored to give the numbers
-# a reference point and nothing is ever proposed against them, because nobody
-# asked us to review their documentation.
+# schema_def names the definition in the project's JSON Schema that each
+# declaration is validated against. That check is the strongest signal the gate
+# has, so it is worth setting wherever a schema exists.
+
+profiles:
+  mcp-python:
+    language: python
+    import_namespace: mcp
+    declarations:
+      - decorator: tool
+        capability: tools
+        shape: schema_object
+        schema_def: Tool
+      - decorator: resource
+        capability: resources
+        shape: uri_object
+        schema_def: Resource
+      - decorator: prompt
+        capability: prompts
+        shape: argument_list
+        schema_def: Prompt
+    tasks:
+      tools: expose a tool that takes two named arguments and returns a value
+      resources: expose a readable resource identified by a URI
+      prompts: expose a reusable prompt template that accepts an argument
+
+# Targets come in three kinds.
+#
+# `pages` are the documentation URLs a developer would actually paste into a
+# chat box. This is the artifact that reaches the model. Nobody pastes a
+# 441,000 token specification, and locating one often means reading build
+# configuration. Pages also belong to the documentation team rather than to
+# engineering, so a finding here is one somebody can act on.
+#
+# `contribution` are open source repositories where a pull request from a
+# stranger is a normal contribution. These get cloned and patched against real
+# files at real line numbers.
+#
+# `benchmark` are commercial specifications, scored only so the numbers have a
+# reference point. Nothing is ever proposed against them, because nobody asked
+# us to review their documentation.
 #
 # Every URL verified to return 200 on the date noted.
 
 targets:
+  - name: stripe-docs
+    kind: pages
+    verified: 2026-07-31
+    pages:
+      - url: https://docs.stripe.com/api/cash_balance
+        task: retrieve a customer's cash balance
+      - url: https://docs.stripe.com/api/charges
+        task: create a charge
+      - url: https://docs.stripe.com/api/customers
+        task: create and retrieve a customer
+
   - name: mcp-spec
     kind: contribution
     repo: https://github.com/modelcontextprotocol/modelcontextprotocol.git
@@ -32,6 +82,16 @@ targets:
       - "README.md"
       - "docs/**/*.md"
       - "examples/**/*.md"
+    # Can a model build a working MCP server from these docs alone? Scored
+    # against the protocol schema and the SDK's real symbol table, both of
+    # which ship in this repository. Runs only with --generation.
+    generation:
+      profile: mcp-python
+      schema: schema/2026-07-28.json
+      docs:
+        - README.md
+        - "docs/*.md"
+        - "docs/**/*.md"
 
   - name: mcp-typescript-sdk
     kind: contribution
@@ -57,4 +117,11 @@ settings:
   # Cap on drafted patches per target per run. A reviewer works through a
   # queue; they do not work through a hundred.
   max_proposals_per_target: 20
+  # Findings repeated this many times in one file collapse into a single
+  # pattern and drop to review. At this scale it is a convention or a
+  # generator, not a mistake, and it should not eat the proposal queue.
+  duplicate_threshold: 3
+  # A page below this word count is unlikely to support an integration task on
+  # its own. Override per page where a short page is genuinely complete.
+  page_min_words: 250
   link_timeout_seconds: 15

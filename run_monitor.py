@@ -19,14 +19,15 @@ import sys
 import tempfile
 from pathlib import Path
 
-from monitor import gates, propose, report, sources
+from monitor import dedupe, gates, generated, mcpgen, pages, propose, report, sources
 from monitor.model import Finding, Tier
+from monitor.profile import Profile
 
 ROOT = Path(__file__).resolve().parent
 
 
-def run_contribution(target: dict, settings: dict, workdir: Path,
-                     args) -> tuple[dict, list[Finding], list]:
+def run_contribution(target: dict, settings: dict, profiles: dict,
+                     workdir: Path, args) -> tuple[dict, list[Finding], list]:
     name = target["name"]
     dest = workdir / name
     ok, message = sources.clone(target["repo"], target.get("ref", "main"), dest)
@@ -43,6 +44,15 @@ def run_contribution(target: dict, settings: dict, workdir: Path,
 
     prose_files = [(str(p.relative_to(dest)), p)
                    for p in sources.collect_files(dest, target.get("prose", []))]
+    prose_files, dropped = generated.filter_files(
+        prose_files, tuple(target.get("generated", [])))
+    if dropped:
+        sample = ", ".join(rel for rel, _ in dropped[:3])
+        entry["gates"].append({
+            "gate": "exclusions", "status": "ok",
+            "summary": f"{len(dropped)} generated or historical files skipped "
+                       f"({sample}{'...' if len(dropped) > 3 else ''})",
+        })
     findings: list[Finding] = []
 
     link_result = gates.gate_links(
@@ -75,6 +85,43 @@ def run_contribution(target: dict, settings: dict, workdir: Path,
         entry["gates"].append(schema_result.to_dict() | {"findings": []})
         findings += schema_result.findings
 
+    generation = target.get("generation")
+    if generation and args.generation:
+        profile_name = generation.get("profile")
+        profile_data = profiles.get(profile_name)
+        if profile_data is None:
+            entry["gates"].append({
+                "gate": "generation", "status": "error",
+                "summary": f"target names profile '{profile_name}', which is "
+                           f"not defined in targets.yml",
+            })
+        else:
+            schema_rel = generation.get("schema")
+            result = mcpgen.gate_generation(
+                target=name, repo_root=dest, sdk_root=dest,
+                schema_path=dest / schema_rel if schema_rel else None,
+                doc_paths=generation.get("docs", []),
+                profile=Profile.from_dict({"name": profile_name, **profile_data}),
+                threshold=args.threshold,
+                model=generation.get("model", mcpgen.DEFAULT_MODEL),
+            )
+            entry["gates"].append(result.to_dict() | {"findings": []})
+            findings += result.findings
+    elif generation:
+        entry["gates"].append({
+            "gate": "generation", "status": "skipped",
+            "summary": "pass --generation to run it; it calls a paid API",
+        })
+
+    findings, absorbed = dedupe.collapse(
+        findings, settings.get("duplicate_threshold", 3))
+    if absorbed:
+        entry["gates"].append({
+            "gate": "dedupe", "status": "ok",
+            "summary": f"{absorbed} repeated findings collapsed into their "
+                       f"patterns and demoted to review",
+        })
+
     proposals, unproposed = propose.build(findings, dest)
 
     # A queue nobody can get through is the same as no queue. Cap it, and say
@@ -92,6 +139,19 @@ def run_contribution(target: dict, settings: dict, workdir: Path,
     for finding in unproposed:
         finding.tier = Tier.REVIEW_ONLY
     return entry, findings, proposals
+
+
+def run_pages(target: dict, settings: dict) -> tuple[dict, list[Finding]]:
+    """Measure the pages a developer would actually paste into a chat box."""
+    name = target["name"]
+    entry = {"name": name, "type": "pages", "revision": "", "gates": []}
+    result = pages.gate_page_fetch(
+        name, target.get("pages", []),
+        min_words=settings.get("page_min_words", 250),
+        timeout=settings.get("fetch_timeout_seconds", 45),
+    )
+    entry["gates"].append(result.to_dict() | {"findings": []})
+    return entry, result.findings
 
 
 def run_benchmark(target: dict, settings: dict, workdir: Path,
@@ -128,6 +188,7 @@ def main() -> int:
     config = sources.load_config(ROOT)
     settings = config["settings"]
     targets = config["targets"]
+    profiles = config.get("profiles", {})
     if args.only:
         targets = [t for t in targets if t["name"] == args.only]
         if not targets:
@@ -142,12 +203,15 @@ def main() -> int:
         workdir = Path(tmp)
         for target in targets:
             print(f"  {target['name']} ...", flush=True)
-            if target.get("kind") == "benchmark":
+            if target.get("kind") == "pages":
+                entry, findings = run_pages(target, settings)
+                proposals = []
+            elif target.get("kind") == "benchmark":
                 entry, findings = run_benchmark(target, settings, workdir, args)
                 proposals = []
             else:
                 entry, findings, proposals = run_contribution(
-                    target, settings, workdir, args)
+                    target, settings, profiles, workdir, args)
             entries.append(entry)
             all_findings += findings
             all_proposals += proposals
