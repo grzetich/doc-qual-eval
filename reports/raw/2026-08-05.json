@@ -1,8 +1,21 @@
 {
-  "run_at": "2026-08-05T12:55:33+00:00",
+  "run_at": "2026-08-05T16:50:40+00:00",
   "threshold": 7.0,
   "generation": false,
   "targets": [
+    {
+      "name": "stripe-docs",
+      "type": "pages",
+      "revision": "",
+      "gates": [
+        {
+          "gate": "page_fetch",
+          "status": "ok",
+          "summary": "3 pages fetched, 15 findings",
+          "findings": []
+        }
+      ]
+    },
     {
       "name": "mcp-spec",
       "type": "contribution",
@@ -30,6 +43,11 @@
           "status": "ok",
           "summary": "valid against https://json-schema.org/draft/2020-12/schema, 155 definitions",
           "findings": []
+        },
+        {
+          "gate": "dedupe",
+          "status": "ok",
+          "summary": "2 repeated findings collapsed into their patterns and demoted to review"
         }
       ]
     },
@@ -54,6 +72,11 @@
           "status": "skipped",
           "summary": "vale not on PATH",
           "findings": []
+        },
+        {
+          "gate": "generation",
+          "status": "skipped",
+          "summary": "pass --generation to run it; it calls a paid API"
         }
       ]
     },
@@ -101,6 +124,290 @@
     }
   ],
   "findings": [
+    {
+      "target": "stripe-docs",
+      "gate": "page_fetch",
+      "kind": "page_too_thin",
+      "message": "page carries 100 words, below the 250 word floor for supporting an integration task",
+      "tier": "review_only",
+      "path": "https://docs.stripe.com/api/cash_balance",
+      "line": null,
+      "evidence": {
+        "url": "https://docs.stripe.com/api/cash_balance",
+        "status": 200,
+        "content_type": "text/markdown; charset=utf-8",
+        "final_url": "https://docs.stripe.com/api/cash_balance",
+        "bytes": 787,
+        "words": 100
+      },
+      "id": "08d777a388"
+    },
+    {
+      "target": "stripe-docs",
+      "gate": "page_fetch",
+      "kind": "page_has_no_examples",
+      "message": "page contains no code block, so a model working from it writes the call signature from training data rather than from the docs",
+      "tier": "review_only",
+      "path": "https://docs.stripe.com/api/cash_balance",
+      "line": null,
+      "evidence": {
+        "url": "https://docs.stripe.com/api/cash_balance",
+        "status": 200,
+        "content_type": "text/markdown; charset=utf-8",
+        "final_url": "https://docs.stripe.com/api/cash_balance",
+        "bytes": 787,
+        "words": 100
+      },
+      "id": "be6ce25858"
+    },
+    {
+      "target": "stripe-docs",
+      "gate": "page_fetch",
+      "kind": "page_is_an_index",
+      "message": "page reads as an index rather than a document: 2 links, no code, 100 words. The content an agent needs is one hop further on",
+      "tier": "review_only",
+      "path": "https://docs.stripe.com/api/cash_balance",
+      "line": null,
+      "evidence": {
+        "url": "https://docs.stripe.com/api/cash_balance",
+        "status": 200,
+        "content_type": "text/markdown; charset=utf-8",
+        "final_url": "https://docs.stripe.com/api/cash_balance",
+        "bytes": 787,
+        "links": 2,
+        "words": 100,
+        "link_density": 2.0
+      },
+      "id": "fd43e516d1"
+    },
+    {
+      "target": "stripe-docs",
+      "gate": "page_fetch",
+      "kind": "page_omits_auth",
+      "message": "page never mentions authentication, so generated code has to guess the scheme",
+      "tier": "review_only",
+      "path": "https://docs.stripe.com/api/cash_balance",
+      "line": null,
+      "evidence": {
+        "url": "https://docs.stripe.com/api/cash_balance",
+        "status": 200,
+        "content_type": "text/markdown; charset=utf-8",
+        "final_url": "https://docs.stripe.com/api/cash_balance",
+        "bytes": 787
+      },
+      "id": "22399aa95c"
+    },
+    {
+      "target": "stripe-docs",
+      "gate": "page_fetch",
+      "kind": "page_omits_parameters",
+      "message": "page names endpoints but documents no parameters, so generated calls are assembled from assumption",
+      "tier": "review_only",
+      "path": "https://docs.stripe.com/api/cash_balance",
+      "line": null,
+      "evidence": {
+        "url": "https://docs.stripe.com/api/cash_balance",
+        "status": 200,
+        "content_type": "text/markdown; charset=utf-8",
+        "final_url": "https://docs.stripe.com/api/cash_balance",
+        "bytes": 787,
+        "endpoints": [
+          "/v1/customers/:id/cash_balance"
+        ]
+      },
+      "id": "6595b50212"
+    },
+    {
+      "target": "stripe-docs",
+      "gate": "page_fetch",
+      "kind": "page_too_thin",
+      "message": "page carries 171 words, below the 250 word floor for supporting an integration task",
+      "tier": "review_only",
+      "path": "https://docs.stripe.com/api/charges",
+      "line": null,
+      "evidence": {
+        "url": "https://docs.stripe.com/api/charges",
+        "status": 200,
+        "content_type": "text/markdown; charset=utf-8",
+        "final_url": "https://docs.stripe.com/api/charges",
+        "bytes": 1563,
+        "words": 171
+      },
+      "id": "4ca0e5f55e"
+    },
+    {
+      "target": "stripe-docs",
+      "gate": "page_fetch",
+      "kind": "page_has_no_examples",
+      "message": "page contains no code block, so a model working from it writes the call signature from training data rather than from the docs",
+      "tier": "review_only",
+      "path": "https://docs.stripe.com/api/charges",
+      "line": null,
+      "evidence": {
+        "url": "https://docs.stripe.com/api/charges",
+        "status": 200,
+        "content_type": "text/markdown; charset=utf-8",
+        "final_url": "https://docs.stripe.com/api/charges",
+        "bytes": 1563,
+        "words": 171
+      },
+      "id": "049b9db5d2"
+    },
+    {
+      "target": "stripe-docs",
+      "gate": "page_fetch",
+      "kind": "page_is_an_index",
+      "message": "page reads as an index rather than a document: 7 links, no code, 171 words. The content an agent needs is one hop further on",
+      "tier": "review_only",
+      "path": "https://docs.stripe.com/api/charges",
+      "line": null,
+      "evidence": {
+        "url": "https://docs.stripe.com/api/charges",
+        "status": 200,
+        "content_type": "text/markdown; charset=utf-8",
+        "final_url": "https://docs.stripe.com/api/charges",
+        "bytes": 1563,
+        "links": 7,
+        "words": 171,
+        "link_density": 4.09
+      },
+      "id": "22da7647d0"
+    },
+    {
+      "target": "stripe-docs",
+      "gate": "page_fetch",
+      "kind": "page_omits_auth",
+      "message": "page never mentions authentication, so generated code has to guess the scheme",
+      "tier": "review_only",
+      "path": "https://docs.stripe.com/api/charges",
+      "line": null,
+      "evidence": {
+        "url": "https://docs.stripe.com/api/charges",
+        "status": 200,
+        "content_type": "text/markdown; charset=utf-8",
+        "final_url": "https://docs.stripe.com/api/charges",
+        "bytes": 1563
+      },
+      "id": "20ae9958b7"
+    },
+    {
+      "target": "stripe-docs",
+      "gate": "page_fetch",
+      "kind": "page_omits_parameters",
+      "message": "page names endpoints but documents no parameters, so generated calls are assembled from assumption",
+      "tier": "review_only",
+      "path": "https://docs.stripe.com/api/charges",
+      "line": null,
+      "evidence": {
+        "url": "https://docs.stripe.com/api/charges",
+        "status": 200,
+        "content_type": "text/markdown; charset=utf-8",
+        "final_url": "https://docs.stripe.com/api/charges",
+        "bytes": 1563,
+        "endpoints": [
+          "/v1/charges",
+          "/v1/charges/:id",
+          "/v1/charges/:id/capture",
+          "/v1/charges/search"
+        ]
+      },
+      "id": "4edbb208e3"
+    },
+    {
+      "target": "stripe-docs",
+      "gate": "page_fetch",
+      "kind": "page_too_thin",
+      "message": "page carries 102 words, below the 250 word floor for supporting an integration task",
+      "tier": "review_only",
+      "path": "https://docs.stripe.com/api/customers",
+      "line": null,
+      "evidence": {
+        "url": "https://docs.stripe.com/api/customers",
+        "status": 200,
+        "content_type": "text/markdown; charset=utf-8",
+        "final_url": "https://docs.stripe.com/api/customers",
+        "bytes": 1131,
+        "words": 102
+      },
+      "id": "a975c943f1"
+    },
+    {
+      "target": "stripe-docs",
+      "gate": "page_fetch",
+      "kind": "page_has_no_examples",
+      "message": "page contains no code block, so a model working from it writes the call signature from training data rather than from the docs",
+      "tier": "review_only",
+      "path": "https://docs.stripe.com/api/customers",
+      "line": null,
+      "evidence": {
+        "url": "https://docs.stripe.com/api/customers",
+        "status": 200,
+        "content_type": "text/markdown; charset=utf-8",
+        "final_url": "https://docs.stripe.com/api/customers",
+        "bytes": 1131,
+        "words": 102
+      },
+      "id": "c22670f86f"
+    },
+    {
+      "target": "stripe-docs",
+      "gate": "page_fetch",
+      "kind": "page_is_an_index",
+      "message": "page reads as an index rather than a document: 8 links, no code, 102 words. The content an agent needs is one hop further on",
+      "tier": "review_only",
+      "path": "https://docs.stripe.com/api/customers",
+      "line": null,
+      "evidence": {
+        "url": "https://docs.stripe.com/api/customers",
+        "status": 200,
+        "content_type": "text/markdown; charset=utf-8",
+        "final_url": "https://docs.stripe.com/api/customers",
+        "bytes": 1131,
+        "links": 8,
+        "words": 102,
+        "link_density": 7.84
+      },
+      "id": "44e7899c5f"
+    },
+    {
+      "target": "stripe-docs",
+      "gate": "page_fetch",
+      "kind": "page_omits_auth",
+      "message": "page never mentions authentication, so generated code has to guess the scheme",
+      "tier": "review_only",
+      "path": "https://docs.stripe.com/api/customers",
+      "line": null,
+      "evidence": {
+        "url": "https://docs.stripe.com/api/customers",
+        "status": 200,
+        "content_type": "text/markdown; charset=utf-8",
+        "final_url": "https://docs.stripe.com/api/customers",
+        "bytes": 1131
+      },
+      "id": "d5f24aa2a2"
+    },
+    {
+      "target": "stripe-docs",
+      "gate": "page_fetch",
+      "kind": "page_omits_parameters",
+      "message": "page names endpoints but documents no parameters, so generated calls are assembled from assumption",
+      "tier": "review_only",
+      "path": "https://docs.stripe.com/api/customers",
+      "line": null,
+      "evidence": {
+        "url": "https://docs.stripe.com/api/customers",
+        "status": 200,
+        "content_type": "text/markdown; charset=utf-8",
+        "final_url": "https://docs.stripe.com/api/customers",
+        "bytes": 1131,
+        "endpoints": [
+          "/v1/customers",
+          "/v1/customers/:id",
+          "/v1/customers/search"
+        ]
+      },
+      "id": "4aa3328a39"
+    },
     {
       "target": "mcp-spec",
       "gate": "links",
@@ -187,18 +494,26 @@
       "target": "mcp-spec",
       "gate": "links",
       "kind": "redirected_link",
-      "message": "https://www.lfprojects.org/policies/ redirects to https://lfprojects.org/policies/ (redirect crosses hosts, www.lfprojects.org to lfprojects.org; a person should confirm the new host is the intended home)",
+      "message": "3 occurrences of the same pattern in docs/community/interest-groups/auth.mdx: https://www.rfc-editor.org/rfc/rfc9728 redirects to https://www.rfc-editor.org/info/rfc9728/ (same host, resource preserved, canonical form of the same page)",
       "tier": "review_only",
-      "path": "docs/community/governance.mdx",
-      "line": 10,
+      "path": "docs/community/interest-groups/auth.mdx",
+      "line": 18,
       "evidence": {
-        "url": "https://www.lfprojects.org/policies/",
-        "final": "https://lfprojects.org/policies/",
+        "url": "https://www.rfc-editor.org/rfc/rfc9728",
+        "final": "https://www.rfc-editor.org/info/rfc9728/",
         "status": 200,
-        "verdict": "review",
-        "reason": "redirect crosses hosts, www.lfprojects.org to lfprojects.org; a person should confirm the new host is the intended home"
+        "verdict": "safe",
+        "reason": "same host, resource preserved, canonical form of the same page",
+        "occurrences": 3,
+        "lines": [
+          18,
+          18,
+          80
+        ],
+        "collapsed": true,
+        "note": "Repeated at this scale this is a convention, a generator, or platform behaviour rather than a mistake. Confirm the pattern is wrong before patching any of it."
       },
-      "id": "8a494aa9cd"
+      "id": "4e96a08a2b"
     },
     {
       "target": "mcp-spec",
@@ -221,6 +536,23 @@
       "target": "mcp-spec",
       "gate": "links",
       "kind": "redirected_link",
+      "message": "https://www.lfprojects.org/policies/ redirects to https://lfprojects.org/policies/ (redirect crosses hosts, www.lfprojects.org to lfprojects.org; a person should confirm the new host is the intended home)",
+      "tier": "review_only",
+      "path": "docs/community/governance.mdx",
+      "line": 10,
+      "evidence": {
+        "url": "https://www.lfprojects.org/policies/",
+        "final": "https://lfprojects.org/policies/",
+        "status": 200,
+        "verdict": "review",
+        "reason": "redirect crosses hosts, www.lfprojects.org to lfprojects.org; a person should confirm the new host is the intended home"
+      },
+      "id": "8a494aa9cd"
+    },
+    {
+      "target": "mcp-spec",
+      "gate": "links",
+      "kind": "redirected_link",
       "message": "https://discord.gg/NzkBHsrGf redirects to https://discord.com/invite/NzkBHsrGf (redirect crosses hosts, discord.gg to discord.com; a person should confirm the new host is the intended home)",
       "tier": "review_only",
       "path": "docs/community/interest-groups/financial-services.mdx",
@@ -233,57 +565,6 @@
         "reason": "redirect crosses hosts, discord.gg to discord.com; a person should confirm the new host is the intended home"
       },
       "id": "9334fa6806"
-    },
-    {
-      "target": "mcp-spec",
-      "gate": "links",
-      "kind": "redirected_link",
-      "message": "https://www.rfc-editor.org/rfc/rfc7591 redirects to https://www.rfc-editor.org/info/rfc7591/ (same host, resource preserved, canonical form of the same page)",
-      "tier": "draftable",
-      "path": "docs/community/interest-groups/auth.mdx",
-      "line": 18,
-      "evidence": {
-        "url": "https://www.rfc-editor.org/rfc/rfc7591",
-        "final": "https://www.rfc-editor.org/info/rfc7591/",
-        "status": 200,
-        "verdict": "safe",
-        "reason": "same host, resource preserved, canonical form of the same page"
-      },
-      "id": "4ad1aa264e"
-    },
-    {
-      "target": "mcp-spec",
-      "gate": "links",
-      "kind": "redirected_link",
-      "message": "https://www.rfc-editor.org/rfc/rfc9728 redirects to https://www.rfc-editor.org/info/rfc9728/ (same host, resource preserved, canonical form of the same page)",
-      "tier": "draftable",
-      "path": "docs/community/interest-groups/auth.mdx",
-      "line": 18,
-      "evidence": {
-        "url": "https://www.rfc-editor.org/rfc/rfc9728",
-        "final": "https://www.rfc-editor.org/info/rfc9728/",
-        "status": 200,
-        "verdict": "safe",
-        "reason": "same host, resource preserved, canonical form of the same page"
-      },
-      "id": "f03e5080f2"
-    },
-    {
-      "target": "mcp-spec",
-      "gate": "links",
-      "kind": "redirected_link",
-      "message": "https://www.rfc-editor.org/rfc/rfc9396 redirects to https://www.rfc-editor.org/info/rfc9396/ (same host, resource preserved, canonical form of the same page)",
-      "tier": "draftable",
-      "path": "docs/community/interest-groups/auth.mdx",
-      "line": 80,
-      "evidence": {
-        "url": "https://www.rfc-editor.org/rfc/rfc9396",
-        "final": "https://www.rfc-editor.org/info/rfc9396/",
-        "status": 200,
-        "verdict": "safe",
-        "reason": "same host, resource preserved, canonical form of the same page"
-      },
-      "id": "d65f6a95f4"
     },
     {
       "target": "mcp-python-sdk",
@@ -374,18 +655,18 @@
       "target": "mcp-python-sdk",
       "gate": "links",
       "kind": "redirected_link",
-      "message": "https://opentelemetry-python.readthedocs.io/ redirects to https://opentelemetry-python.readthedocs.io/en/latest/ (same host, resource preserved, canonical form of the same page)",
+      "message": "https://rich.readthedocs.io/ redirects to https://rich.readthedocs.io/en/stable/ (same host, resource preserved, canonical form of the same page)",
       "tier": "draftable",
       "path": "docs/get-started/installation.md",
-      "line": 35,
+      "line": 42,
       "evidence": {
-        "url": "https://opentelemetry-python.readthedocs.io/",
-        "final": "https://opentelemetry-python.readthedocs.io/en/latest/",
+        "url": "https://rich.readthedocs.io/",
+        "final": "https://rich.readthedocs.io/en/stable/",
         "status": 200,
         "verdict": "safe",
         "reason": "same host, resource preserved, canonical form of the same page"
       },
-      "id": "41c25f8393"
+      "id": "99d9bc1796"
     },
     {
       "target": "mcp-python-sdk",
@@ -408,18 +689,35 @@
       "target": "mcp-python-sdk",
       "gate": "links",
       "kind": "redirected_link",
-      "message": "https://rich.readthedocs.io/ redirects to https://rich.readthedocs.io/en/stable/ (same host, resource preserved, canonical form of the same page)",
+      "message": "https://opentelemetry-python.readthedocs.io/ redirects to https://opentelemetry-python.readthedocs.io/en/latest/ (same host, resource preserved, canonical form of the same page)",
       "tier": "draftable",
       "path": "docs/get-started/installation.md",
-      "line": 42,
+      "line": 35,
       "evidence": {
-        "url": "https://rich.readthedocs.io/",
-        "final": "https://rich.readthedocs.io/en/stable/",
+        "url": "https://opentelemetry-python.readthedocs.io/",
+        "final": "https://opentelemetry-python.readthedocs.io/en/latest/",
         "status": 200,
         "verdict": "safe",
         "reason": "same host, resource preserved, canonical form of the same page"
       },
-      "id": "99d9bc1796"
+      "id": "41c25f8393"
+    },
+    {
+      "target": "mcp-python-sdk",
+      "gate": "links",
+      "kind": "redirected_link",
+      "message": "https://logfire.pydantic.dev/ redirects to https://logfire-us.pydantic.dev/ (redirect crosses hosts, logfire.pydantic.dev to logfire-us.pydantic.dev; a person should confirm the new host is the intended home)",
+      "tier": "review_only",
+      "path": "docs/run/opentelemetry.md",
+      "line": 59,
+      "evidence": {
+        "url": "https://logfire.pydantic.dev/",
+        "final": "https://logfire-us.pydantic.dev/",
+        "status": 200,
+        "verdict": "review",
+        "reason": "redirect crosses hosts, logfire.pydantic.dev to logfire-us.pydantic.dev; a person should confirm the new host is the intended home"
+      },
+      "id": "a0f2372409"
     },
     {
       "target": "mcp-python-sdk",
@@ -442,18 +740,18 @@
       "target": "mcp-python-sdk",
       "gate": "links",
       "kind": "redirected_link",
-      "message": "https://logfire.pydantic.dev/ redirects to https://logfire-us.pydantic.dev/ (redirect crosses hosts, logfire.pydantic.dev to logfire-us.pydantic.dev; a person should confirm the new host is the intended home)",
-      "tier": "review_only",
-      "path": "docs/run/opentelemetry.md",
-      "line": 59,
+      "message": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/2133 redirects to https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2133 (same host, resource preserved, canonical form of the same page)",
+      "tier": "draftable",
+      "path": "examples/stories/apps/README.md",
+      "line": 36,
       "evidence": {
-        "url": "https://logfire.pydantic.dev/",
-        "final": "https://logfire-us.pydantic.dev/",
+        "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/2133",
+        "final": "https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2133",
         "status": 200,
-        "verdict": "review",
-        "reason": "redirect crosses hosts, logfire.pydantic.dev to logfire-us.pydantic.dev; a person should confirm the new host is the intended home"
+        "verdict": "safe",
+        "reason": "same host, resource preserved, canonical form of the same page"
       },
-      "id": "a0f2372409"
+      "id": "9bc777a632"
     },
     {
       "target": "mcp-python-sdk",
@@ -473,18 +771,18 @@
       "target": "mcp-python-sdk",
       "gate": "links",
       "kind": "redirected_link",
-      "message": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/2133 redirects to https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2133 (same host, resource preserved, canonical form of the same page)",
+      "message": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/2577 redirects to https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2577 (same host, resource preserved, canonical form of the same page)",
       "tier": "draftable",
-      "path": "examples/stories/apps/README.md",
-      "line": 36,
+      "path": "docs/handlers/sampling-and-roots.md",
+      "line": 8,
       "evidence": {
-        "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/2133",
-        "final": "https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2133",
+        "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/2577",
+        "final": "https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2577",
         "status": 200,
         "verdict": "safe",
         "reason": "same host, resource preserved, canonical form of the same page"
       },
-      "id": "9bc777a632"
+      "id": "2c67387f85"
     },
     {
       "target": "mcp-python-sdk",
@@ -499,23 +797,6 @@
         "status": 404
       },
       "id": "2e810f21e0"
-    },
-    {
-      "target": "mcp-python-sdk",
-      "gate": "links",
-      "kind": "redirected_link",
-      "message": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/2577 redirects to https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2577 (same host, resource preserved, canonical form of the same page)",
-      "tier": "draftable",
-      "path": "docs/handlers/sampling-and-roots.md",
-      "line": 8,
-      "evidence": {
-        "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/2577",
-        "final": "https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2577",
-        "status": 200,
-        "verdict": "safe",
-        "reason": "same host, resource preserved, canonical form of the same page"
-      },
-      "id": "2c67387f85"
     },
     {
       "target": "mcp-python-sdk",
@@ -584,30 +865,6 @@
       "verification": "Requested https://nodejs.org/, followed redirects to https://nodejs.org/en (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
     },
     {
-      "finding_id": "4ad1aa264e",
-      "target": "mcp-spec",
-      "path": "docs/community/interest-groups/auth.mdx",
-      "diff": "--- a/docs/community/interest-groups/auth.mdx\n+++ b/docs/community/interest-groups/auth.mdx\n@@ -15,7 +15,7 @@\n \n ### In Scope\n \n-- **Deployment experience reports**: how implementers have integrated the current authorization spec (OAuth 2.1, [RFC 9728](https://www.rfc-editor.org/rfc/rfc9728) Protected Resource Metadata, [RFC 7591](https://www.rfc-editor.org/rfc/rfc7591) Dynamic Client Registration, Client ID Metadata Documents) with real authorization servers, and where it falls short\n+- **Deployment experience reports**: how implementers have integrated the current authorization spec (OAuth 2.1, [RFC 9728](https://www.rfc-editor.org/rfc/rfc9728) Protected Resource Metadata, [RFC 7591](https://www.rfc-editor.org/info/rfc7591/) Dynamic Client Registration, Client ID Metadata Documents) with real authorization servers, and where it falls short\n - **Enterprise identity integration**: requirements and friction points when connecting MCP servers to enterprise IdPs (Okta, Entra ID, Ping, Keycloak, etc.), including SSO, tenant isolation, and admin consent flows\n - **Delegated and agentic access**: use cases for on-behalf-of token exchange, downstream resource access, audience restriction, and consent when an MCP client acts through chains of agents or tools\n - **Scope and permission granularity**: whether and how MCP servers should advertise fine-grained scopes (per-tool, per-resource) and how clients should request and present them\n",
-      "rationale": "The documented URL redirects. Pointing it at the resolved location removes a hop and survives the redirect being retired.",
-      "verification": "Requested https://www.rfc-editor.org/rfc/rfc7591, followed redirects to https://www.rfc-editor.org/info/rfc7591/ (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
-    },
-    {
-      "finding_id": "f03e5080f2",
-      "target": "mcp-spec",
-      "path": "docs/community/interest-groups/auth.mdx",
-      "diff": "--- a/docs/community/interest-groups/auth.mdx\n+++ b/docs/community/interest-groups/auth.mdx\n@@ -15,7 +15,7 @@\n \n ### In Scope\n \n-- **Deployment experience reports**: how implementers have integrated the current authorization spec (OAuth 2.1, [RFC 9728](https://www.rfc-editor.org/rfc/rfc9728) Protected Resource Metadata, [RFC 7591](https://www.rfc-editor.org/rfc/rfc7591) Dynamic Client Registration, Client ID Metadata Documents) with real authorization servers, and where it falls short\n+- **Deployment experience reports**: how implementers have integrated the current authorization spec (OAuth 2.1, [RFC 9728](https://www.rfc-editor.org/info/rfc9728/) Protected Resource Metadata, [RFC 7591](https://www.rfc-editor.org/rfc/rfc7591) Dynamic Client Registration, Client ID Metadata Documents) with real authorization servers, and where it falls short\n - **Enterprise identity integration**: requirements and friction points when connecting MCP servers to enterprise IdPs (Okta, Entra ID, Ping, Keycloak, etc.), including SSO, tenant isolation, and admin consent flows\n - **Delegated and agentic access**: use cases for on-behalf-of token exchange, downstream resource access, audience restriction, and consent when an MCP client acts through chains of agents or tools\n - **Scope and permission granularity**: whether and how MCP servers should advertise fine-grained scopes (per-tool, per-resource) and how clients should request and present them\n",
-      "rationale": "The documented URL redirects. Pointing it at the resolved location removes a hop and survives the redirect being retired.",
-      "verification": "Requested https://www.rfc-editor.org/rfc/rfc9728, followed redirects to https://www.rfc-editor.org/info/rfc9728/ (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
-    },
-    {
-      "finding_id": "d65f6a95f4",
-      "target": "mcp-spec",
-      "path": "docs/community/interest-groups/auth.mdx",
-      "diff": "--- a/docs/community/interest-groups/auth.mdx\n+++ b/docs/community/interest-groups/auth.mdx\n@@ -77,7 +77,7 @@\n | Mix-up Protection          | `#auth-wg-mixup-protection`    | Mitigating OAuth authorization-server mix-up and token-audience confusion attacks                                                                                                   | Completed | \u2014       |\n | Profiles                   | `#auth-wg-profiles`            | Extension specifications for additional grant types and token-binding mechanisms (Client Credentials, Enterprise-Managed Authorization, DPoP, Workload Identity Federation)         | Completed | \u2014       |\n | Tool Scopes                | `#auth-wg-tool-scopes`         | Per-tool OAuth scope advertisement, step-up authorization / scope challenge, and client-side scope accumulation \u2014 mechanics within the OAuth scope-string model                     | Active    | Pending |\n-| Fine-Grained Authorization | `#auth-wg-fine-grained-authz`  | Authorization granularity beyond scope strings \u2014 Rich Authorization Requests ([RFC 9396](https://www.rfc-editor.org/rfc/rfc9396)), remediation hints, and multi-credential handling | Active    | Pending |\n+| Fine-Grained Authorization | `#auth-wg-fine-grained-authz`  | Authorization granularity beyond scope strings \u2014 Rich Authorization Requests ([RFC 9396](https://www.rfc-editor.org/info/rfc9396/)), remediation hints, and multi-credential handling | Active    | Pending |\n | Improve DevX               | `#auth-wg-improve-devx`        | Best-practices guidance and tutorials for building secure MCP clients and servers, beyond the normative spec                                                                        | Completed | \u2014       |\n \n ## Changelog\n",
-      "rationale": "The documented URL redirects. Pointing it at the resolved location removes a hop and survives the redirect being retired.",
-      "verification": "Requested https://www.rfc-editor.org/rfc/rfc9396, followed redirects to https://www.rfc-editor.org/info/rfc9396/ (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
-    },
-    {
       "finding_id": "57cdd41177",
       "target": "mcp-python-sdk",
       "path": "README.md",
@@ -632,12 +889,12 @@
       "verification": "Requested https://anyio.readthedocs.io/, followed redirects to https://anyio.readthedocs.io/en/stable/ (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
     },
     {
-      "finding_id": "41c25f8393",
+      "finding_id": "99d9bc1796",
       "target": "mcp-python-sdk",
       "path": "docs/get-started/installation.md",
-      "diff": "--- a/docs/get-started/installation.md\n+++ b/docs/get-started/installation.md\n@@ -32,7 +32,7 @@\n * [`starlette`](https://www.starlette.io/), [`uvicorn`](https://www.uvicorn.org/), [`sse-starlette`](https://pypi.org/project/sse-starlette/), and [`python-multipart`](https://pypi.org/project/python-multipart/): the HTTP *server* transports.\n * [`jsonschema`](https://pypi.org/project/jsonschema/): validates a tool's structured output against its declared output schema.\n * [`pyjwt[crypto]`](https://pyjwt.readthedocs.io/): OAuth token handling for authorization.\n-* [`opentelemetry-api`](https://opentelemetry-python.readthedocs.io/): just the lightweight API, so the SDK's tracing middleware costs nothing unless you install an OpenTelemetry SDK and exporter yourself.\n+* [`opentelemetry-api`](https://opentelemetry-python.readthedocs.io/en/latest/): just the lightweight API, so the SDK's tracing middleware costs nothing unless you install an OpenTelemetry SDK and exporter yourself.\n * [`typing-extensions`](https://typing-extensions.readthedocs.io/) and [`typing-inspection`](https://pypi.org/project/typing-inspection/): modern typing features on Python 3.10.\n * [`pywin32`](https://pypi.org/project/pywin32/): Windows only, used for `stdio` subprocess management.\n \n",
+      "diff": "--- a/docs/get-started/installation.md\n+++ b/docs/get-started/installation.md\n@@ -39,4 +39,4 @@\n ## Optional extras\n \n * `mcp[cli]` adds [`typer`](https://typer.tiangolo.com/) and [`python-dotenv`](https://pypi.org/project/python-dotenv/) for the `mcp` command-line tool (`mcp dev`, `mcp run`, `mcp install`). You'll want this during development; you may not need it in a deployed server.\n-* `mcp[rich]` adds [`rich`](https://rich.readthedocs.io/) for nicer server logs.\n+* `mcp[rich]` adds [`rich`](https://rich.readthedocs.io/en/stable/) for nicer server logs.\n",
       "rationale": "The documented URL redirects. Pointing it at the resolved location removes a hop and survives the redirect being retired.",
-      "verification": "Requested https://opentelemetry-python.readthedocs.io/, followed redirects to https://opentelemetry-python.readthedocs.io/en/latest/ (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
+      "verification": "Requested https://rich.readthedocs.io/, followed redirects to https://rich.readthedocs.io/en/stable/ (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
     },
     {
       "finding_id": "b168171a30",
@@ -648,12 +905,12 @@
       "verification": "Requested https://typing-extensions.readthedocs.io/, followed redirects to https://typing-extensions.readthedocs.io/en/latest/ (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
     },
     {
-      "finding_id": "99d9bc1796",
+      "finding_id": "41c25f8393",
       "target": "mcp-python-sdk",
       "path": "docs/get-started/installation.md",
-      "diff": "--- a/docs/get-started/installation.md\n+++ b/docs/get-started/installation.md\n@@ -39,4 +39,4 @@\n ## Optional extras\n \n * `mcp[cli]` adds [`typer`](https://typer.tiangolo.com/) and [`python-dotenv`](https://pypi.org/project/python-dotenv/) for the `mcp` command-line tool (`mcp dev`, `mcp run`, `mcp install`). You'll want this during development; you may not need it in a deployed server.\n-* `mcp[rich]` adds [`rich`](https://rich.readthedocs.io/) for nicer server logs.\n+* `mcp[rich]` adds [`rich`](https://rich.readthedocs.io/en/stable/) for nicer server logs.\n",
+      "diff": "--- a/docs/get-started/installation.md\n+++ b/docs/get-started/installation.md\n@@ -32,7 +32,7 @@\n * [`starlette`](https://www.starlette.io/), [`uvicorn`](https://www.uvicorn.org/), [`sse-starlette`](https://pypi.org/project/sse-starlette/), and [`python-multipart`](https://pypi.org/project/python-multipart/): the HTTP *server* transports.\n * [`jsonschema`](https://pypi.org/project/jsonschema/): validates a tool's structured output against its declared output schema.\n * [`pyjwt[crypto]`](https://pyjwt.readthedocs.io/): OAuth token handling for authorization.\n-* [`opentelemetry-api`](https://opentelemetry-python.readthedocs.io/): just the lightweight API, so the SDK's tracing middleware costs nothing unless you install an OpenTelemetry SDK and exporter yourself.\n+* [`opentelemetry-api`](https://opentelemetry-python.readthedocs.io/en/latest/): just the lightweight API, so the SDK's tracing middleware costs nothing unless you install an OpenTelemetry SDK and exporter yourself.\n * [`typing-extensions`](https://typing-extensions.readthedocs.io/) and [`typing-inspection`](https://pypi.org/project/typing-inspection/): modern typing features on Python 3.10.\n * [`pywin32`](https://pypi.org/project/pywin32/): Windows only, used for `stdio` subprocess management.\n \n",
       "rationale": "The documented URL redirects. Pointing it at the resolved location removes a hop and survives the redirect being retired.",
-      "verification": "Requested https://rich.readthedocs.io/, followed redirects to https://rich.readthedocs.io/en/stable/ (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
+      "verification": "Requested https://opentelemetry-python.readthedocs.io/, followed redirects to https://opentelemetry-python.readthedocs.io/en/latest/ (HTTP 200). Classified as a genuine move: same host, resource preserved, canonical form of the same page."
     },
     {
       "finding_id": "f25a934431",

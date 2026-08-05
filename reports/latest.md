@@ -1,15 +1,16 @@
 # Latest run
 
-Run at 2026-08-05T12:55:33+00:00 UTC.
+Run at 2026-08-05T16:50:40+00:00 UTC.
 
-16 patches drafted, 12 findings left for review, 0 findings deliberately not patched.
+13 patches drafted, 28 findings left for review, 0 findings deliberately not patched.
 
 ## Targets
 
 | Target | Type | Revision | Gates |
 | --- | --- | --- | --- |
-| mcp-spec | contribution | 5c4f176 | checkout:ok, links:ok, prose:skipped, jsonschema:ok |
-| mcp-python-sdk | contribution | a4f4ccd | checkout:ok, links:ok, prose:skipped |
+| stripe-docs | pages |  | page_fetch:ok |
+| mcp-spec | contribution | 5c4f176 | checkout:ok, links:ok, prose:skipped, jsonschema:ok, dedupe:ok |
+| mcp-python-sdk | contribution | a4f4ccd | checkout:ok, links:ok, prose:skipped, generation:skipped |
 | mcp-typescript-sdk | contribution | cc4b416 | checkout:ok, links:ok, prose:skipped |
 | stripe | benchmark |  | fetch:ok, artie:error |
 
@@ -21,15 +22,12 @@ In `reports/proposals/2026-08-05/`. Nothing has been opened.
 | --- | --- | --- | --- |
 | 359d824eed | mcp-spec | README.md | Requested https://modelcontextprotocol.io, followed redirects to https://modelco |
 | 87384173a1 | mcp-spec | docs/community/contributing.mdx | Requested https://nodejs.org/, followed redirects to https://nodejs.org/en (HTTP |
-| 4ad1aa264e | mcp-spec | docs/community/interest-groups/auth.mdx | Requested https://www.rfc-editor.org/rfc/rfc7591, followed redirects to https:// |
-| f03e5080f2 | mcp-spec | docs/community/interest-groups/auth.mdx | Requested https://www.rfc-editor.org/rfc/rfc9728, followed redirects to https:// |
-| d65f6a95f4 | mcp-spec | docs/community/interest-groups/auth.mdx | Requested https://www.rfc-editor.org/rfc/rfc9396, followed redirects to https:// |
 | 57cdd41177 | mcp-python-sdk | README.md | Requested https://modelcontextprotocol.io, followed redirects to https://modelco |
 | ce0c0c90b7 | mcp-python-sdk | README.md | Requested https://modelcontextprotocol.io/specification/latest, followed redirec |
 | d676ebedb3 | mcp-python-sdk | docs/get-started/installation.md | Requested https://anyio.readthedocs.io/, followed redirects to https://anyio.rea |
-| 41c25f8393 | mcp-python-sdk | docs/get-started/installation.md | Requested https://opentelemetry-python.readthedocs.io/, followed redirects to ht |
-| b168171a30 | mcp-python-sdk | docs/get-started/installation.md | Requested https://typing-extensions.readthedocs.io/, followed redirects to https |
 | 99d9bc1796 | mcp-python-sdk | docs/get-started/installation.md | Requested https://rich.readthedocs.io/, followed redirects to https://rich.readt |
+| b168171a30 | mcp-python-sdk | docs/get-started/installation.md | Requested https://typing-extensions.readthedocs.io/, followed redirects to https |
+| 41c25f8393 | mcp-python-sdk | docs/get-started/installation.md | Requested https://opentelemetry-python.readthedocs.io/, followed redirects to ht |
 | f25a934431 | mcp-python-sdk | docs/servers/uri-templates.md | Requested https://modelcontextprotocol.io/specification/latest/server/resources, |
 | 9bc777a632 | mcp-python-sdk | examples/stories/apps/README.md | Requested https://github.com/modelcontextprotocol/modelcontextprotocol/issues/21 |
 | 2c67387f85 | mcp-python-sdk | docs/handlers/sampling-and-roots.md | Requested https://github.com/modelcontextprotocol/modelcontextprotocol/issues/25 |
@@ -42,11 +40,27 @@ Real findings where the correct fix is not derivable from the document.
 
 | Target | Kind | Location | Finding |
 | --- | --- | --- | --- |
+| stripe-docs | page_too_thin | https://docs.stripe.com/api/cash_balance: | page carries 100 words, below the 250 word floor for supporting an integration task |
+| stripe-docs | page_has_no_examples | https://docs.stripe.com/api/cash_balance: | page contains no code block, so a model working from it writes the call signature from tra |
+| stripe-docs | page_is_an_index | https://docs.stripe.com/api/cash_balance: | page reads as an index rather than a document: 2 links, no code, 100 words. The content an |
+| stripe-docs | page_omits_auth | https://docs.stripe.com/api/cash_balance: | page never mentions authentication, so generated code has to guess the scheme |
+| stripe-docs | page_omits_parameters | https://docs.stripe.com/api/cash_balance: | page names endpoints but documents no parameters, so generated calls are assembled from as |
+| stripe-docs | page_too_thin | https://docs.stripe.com/api/charges: | page carries 171 words, below the 250 word floor for supporting an integration task |
+| stripe-docs | page_has_no_examples | https://docs.stripe.com/api/charges: | page contains no code block, so a model working from it writes the call signature from tra |
+| stripe-docs | page_is_an_index | https://docs.stripe.com/api/charges: | page reads as an index rather than a document: 7 links, no code, 171 words. The content an |
+| stripe-docs | page_omits_auth | https://docs.stripe.com/api/charges: | page never mentions authentication, so generated code has to guess the scheme |
+| stripe-docs | page_omits_parameters | https://docs.stripe.com/api/charges: | page names endpoints but documents no parameters, so generated calls are assembled from as |
+| stripe-docs | page_too_thin | https://docs.stripe.com/api/customers: | page carries 102 words, below the 250 word floor for supporting an integration task |
+| stripe-docs | page_has_no_examples | https://docs.stripe.com/api/customers: | page contains no code block, so a model working from it writes the call signature from tra |
+| stripe-docs | page_is_an_index | https://docs.stripe.com/api/customers: | page reads as an index rather than a document: 8 links, no code, 102 words. The content an |
+| stripe-docs | page_omits_auth | https://docs.stripe.com/api/customers: | page never mentions authentication, so generated code has to guess the scheme |
+| stripe-docs | page_omits_parameters | https://docs.stripe.com/api/customers: | page names endpoints but documents no parameters, so generated calls are assembled from as |
 | mcp-spec | redirected_link | docs/community/communication.mdx:12 | https://discord.gg/6CSzBmMkjX redirects to https://discord.com/invite/6CSzBmMkjX (redirect |
 | mcp-spec | dead_link | docs/community/contributing.mdx:98 | https://github.com/YOUR-USERNAME/modelcontextprotocol.git returns 404 |
 | mcp-spec | redirected_link | docs/community/contributing.mdx:319 | https://mintlify.com/ redirects to https://www.mintlify.com/ (redirect crosses hosts, mint |
-| mcp-spec | redirected_link | docs/community/governance.mdx:10 | https://www.lfprojects.org/policies/ redirects to https://lfprojects.org/policies/ (redire |
+| mcp-spec | redirected_link | docs/community/interest-groups/auth.mdx:18 | 3 occurrences of the same pattern in docs/community/interest-groups/auth.mdx: https://www. |
 | mcp-spec | redirected_link | docs/community/interest-groups/enterprise-managed-authorization.mdx:60 | https://discord.gg/xw55W9Sw5s redirects to https://discord.com/invite/xw55W9Sw5s (redirect |
+| mcp-spec | redirected_link | docs/community/governance.mdx:10 | https://www.lfprojects.org/policies/ redirects to https://lfprojects.org/policies/ (redire |
 | mcp-spec | redirected_link | docs/community/interest-groups/financial-services.mdx:101 | https://discord.gg/NzkBHsrGf redirects to https://discord.com/invite/NzkBHsrGf (redirect c |
 | mcp-python-sdk | redirected_link | README.md:21 | https://discord.gg/6CSzBmMkjX redirects to https://discord.com/invite/6CSzBmMkjX (redirect |
 | mcp-python-sdk | redirected_link | docs/get-started/installation.md:30 | https://docs.pydantic.dev/ redirects to https://pydantic.dev/docs/ (redirect crosses hosts |
