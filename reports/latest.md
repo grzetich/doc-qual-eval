@@ -1,6 +1,6 @@
 # Latest run
 
-Run at 2026-08-15T11:22:54+00:00 UTC.
+Run at 2026-08-16T11:22:30+00:00 UTC.
 
 13 patches drafted, 28 findings left for review, 0 findings deliberately not patched.
 
@@ -11,12 +11,12 @@ Run at 2026-08-15T11:22:54+00:00 UTC.
 | stripe-docs | pages |  | page_fetch:ok |
 | mcp-spec | contribution | 4df2d6b | checkout:ok, links:ok, prose:skipped, jsonschema:ok, dedupe:ok |
 | mcp-python-sdk | contribution | 52ad0a8 | checkout:ok, links:ok, prose:skipped, generation:skipped |
-| mcp-typescript-sdk | contribution | 27a94b5 | checkout:ok, links:ok, prose:skipped |
+| mcp-typescript-sdk | contribution | 03842cd | checkout:ok, links:ok, prose:skipped |
 | stripe | benchmark |  | fetch:ok, artie:error |
 
 ## Drafted patches
 
-In `reports/proposals/2026-08-15/`. Nothing has been opened.
+In `reports/proposals/2026-08-16/`. Nothing has been opened.
 
 | ID | Target | File | Verified by |
 | --- | --- | --- | --- |
