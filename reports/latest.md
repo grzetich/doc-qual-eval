@@ -1,8 +1,8 @@
 # Latest run
 
-Run at 2026-08-17T11:27:25+00:00 UTC.
+Run at 2026-08-18T11:27:17+00:00 UTC.
 
-13 patches drafted, 28 findings left for review, 0 findings deliberately not patched.
+14 patches drafted, 28 findings left for review, 0 findings deliberately not patched.
 
 ## Targets
 
@@ -10,13 +10,13 @@ Run at 2026-08-17T11:27:25+00:00 UTC.
 | --- | --- | --- | --- |
 | stripe-docs | pages |  | page_fetch:ok |
 | mcp-spec | contribution | 4df2d6b | checkout:ok, links:ok, prose:skipped, jsonschema:ok, dedupe:ok |
-| mcp-python-sdk | contribution | 37b3cb1 | checkout:ok, links:ok, prose:skipped, generation:skipped |
+| mcp-python-sdk | contribution | 0d92192 | checkout:ok, links:ok, prose:skipped, generation:skipped |
 | mcp-typescript-sdk | contribution | 3e90449 | checkout:ok, links:ok, prose:skipped |
 | stripe | benchmark |  | fetch:ok, artie:error |
 
 ## Drafted patches
 
-In `reports/proposals/2026-08-17/`. Nothing has been opened.
+In `reports/proposals/2026-08-18/`. Nothing has been opened.
 
 | ID | Target | File | Verified by |
 | --- | --- | --- | --- |
@@ -24,13 +24,14 @@ In `reports/proposals/2026-08-17/`. Nothing has been opened.
 | 87384173a1 | mcp-spec | docs/community/contributing.mdx | Requested https://nodejs.org/, followed redirects to https://nodejs.org/en (HTTP |
 | 57cdd41177 | mcp-python-sdk | README.md | Requested https://modelcontextprotocol.io, followed redirects to https://modelco |
 | 9781b14cbc | mcp-python-sdk | README.md | Requested https://modelcontextprotocol.io/specification/latest, followed redirec |
+| 9be4b1fc54 | mcp-python-sdk | docs/advanced/low-level-server.md | Requested https://modelcontextprotocol.io/specification/latest/basic#json-schema |
 | d676ebedb3 | mcp-python-sdk | docs/get-started/installation.md | Requested https://anyio.readthedocs.io/, followed redirects to https://anyio.rea |
 | 41c25f8393 | mcp-python-sdk | docs/get-started/installation.md | Requested https://opentelemetry-python.readthedocs.io/, followed redirects to ht |
 | b168171a30 | mcp-python-sdk | docs/get-started/installation.md | Requested https://typing-extensions.readthedocs.io/, followed redirects to https |
 | 99d9bc1796 | mcp-python-sdk | docs/get-started/installation.md | Requested https://rich.readthedocs.io/, followed redirects to https://rich.readt |
 | f25a934431 | mcp-python-sdk | docs/servers/uri-templates.md | Requested https://modelcontextprotocol.io/specification/latest/server/resources, |
-| 9bc777a632 | mcp-python-sdk | examples/stories/apps/README.md | Requested https://github.com/modelcontextprotocol/modelcontextprotocol/issues/21 |
 | 2c67387f85 | mcp-python-sdk | docs/handlers/sampling-and-roots.md | Requested https://github.com/modelcontextprotocol/modelcontextprotocol/issues/25 |
+| 9bc777a632 | mcp-python-sdk | examples/stories/apps/README.md | Requested https://github.com/modelcontextprotocol/modelcontextprotocol/issues/21 |
 | b48e0cff86 | mcp-typescript-sdk | README.md | Requested https://modelcontextprotocol.io/docs, followed redirects to https://mo |
 | 3b892475dd | mcp-typescript-sdk | README.md | Requested https://modelcontextprotocol.io/specification/latest, followed redirec |
 
@@ -56,8 +57,8 @@ Real findings where the correct fix is not derivable from the document.
 | stripe-docs | page_omits_auth | https://docs.stripe.com/api/customers: | page never mentions authentication, so generated code has to guess the scheme |
 | stripe-docs | page_omits_parameters | https://docs.stripe.com/api/customers: | page names endpoints but documents no parameters, so generated calls are assembled from as |
 | mcp-spec | redirected_link | docs/community/communication.mdx:12 | https://discord.gg/6CSzBmMkjX redirects to https://discord.com/invite/6CSzBmMkjX (redirect |
-| mcp-spec | redirected_link | docs/community/contributing.mdx:319 | https://mintlify.com/ redirects to https://www.mintlify.com/ (redirect crosses hosts, mint |
 | mcp-spec | dead_link | docs/community/contributing.mdx:98 | https://github.com/YOUR-USERNAME/modelcontextprotocol.git returns 404 |
+| mcp-spec | redirected_link | docs/community/contributing.mdx:319 | https://mintlify.com/ redirects to https://www.mintlify.com/ (redirect crosses hosts, mint |
 | mcp-spec | redirected_link | docs/community/interest-groups/auth.mdx:18 | 3 occurrences of the same pattern in docs/community/interest-groups/auth.mdx: https://www. |
 | mcp-spec | redirected_link | docs/community/interest-groups/enterprise-managed-authorization.mdx:60 | https://discord.gg/xw55W9Sw5s redirects to https://discord.com/invite/xw55W9Sw5s (redirect |
 | mcp-spec | redirected_link | docs/community/interest-groups/financial-services.mdx:101 | https://discord.gg/NzkBHsrGf redirects to https://discord.com/invite/NzkBHsrGf (redirect c |
