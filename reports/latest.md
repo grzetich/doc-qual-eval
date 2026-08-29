@@ -1,6 +1,6 @@
 # Latest run
 
-Run at 2026-08-28T21:19:12+00:00 UTC.
+Run at 2026-08-29T15:28:13+00:00 UTC.
 
 14 patches drafted, 28 findings left for review, 0 findings deliberately not patched.
 
@@ -9,14 +9,14 @@ Run at 2026-08-28T21:19:12+00:00 UTC.
 | Target | Type | Revision | Gates |
 | --- | --- | --- | --- |
 | stripe-docs | pages |  | page_fetch:ok |
-| mcp-spec | contribution | d8fdc88 | checkout:ok, links:ok, prose:skipped, jsonschema:ok, dedupe:ok |
+| mcp-spec | contribution | ca4ab30 | checkout:ok, links:ok, prose:skipped, jsonschema:ok, dedupe:ok |
 | mcp-python-sdk | contribution | d2290ca | checkout:ok, links:ok, prose:skipped, generation:skipped |
 | mcp-typescript-sdk | contribution | 70de0c8 | checkout:ok, links:ok, prose:skipped |
 | stripe | benchmark |  | fetch:ok, artie:error |
 
 ## Drafted patches
 
-In `reports/proposals/2026-08-28/`. Nothing has been opened.
+In `reports/proposals/2026-08-29/`. Nothing has been opened.
 
 | ID | Target | File | Verified by |
 | --- | --- | --- | --- |
@@ -32,8 +32,8 @@ In `reports/proposals/2026-08-28/`. Nothing has been opened.
 | f25a934431 | mcp-python-sdk | docs/servers/uri-templates.md | Requested https://modelcontextprotocol.io/specification/latest/server/resources, |
 | 9bc777a632 | mcp-python-sdk | examples/stories/apps/README.md | Requested https://github.com/modelcontextprotocol/modelcontextprotocol/issues/21 |
 | 2c67387f85 | mcp-python-sdk | docs/handlers/sampling-and-roots.md | Requested https://github.com/modelcontextprotocol/modelcontextprotocol/issues/25 |
-| b48e0cff86 | mcp-typescript-sdk | README.md | Requested https://modelcontextprotocol.io/docs, followed redirects to https://mo |
 | 3b892475dd | mcp-typescript-sdk | README.md | Requested https://modelcontextprotocol.io/specification/latest, followed redirec |
+| b48e0cff86 | mcp-typescript-sdk | README.md | Requested https://modelcontextprotocol.io/docs, followed redirects to https://mo |
 
 ## Findings needing a human
 
