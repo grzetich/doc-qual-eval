@@ -1,6 +1,6 @@
 # Latest run
 
-Run at 2026-08-31T17:51:19+00:00 UTC.
+Run at 2026-09-01T15:22:51+00:00 UTC.
 
 14 patches drafted, 28 findings left for review, 0 findings deliberately not patched.
 
@@ -16,7 +16,7 @@ Run at 2026-08-31T17:51:19+00:00 UTC.
 
 ## Drafted patches
 
-In `reports/proposals/2026-08-31/`. Nothing has been opened.
+In `reports/proposals/2026-09-01/`. Nothing has been opened.
 
 | ID | Target | File | Verified by |
 | --- | --- | --- | --- |
@@ -66,9 +66,9 @@ Real findings where the correct fix is not derivable from the document.
 | mcp-python-sdk | redirected_link | README.md:21 | https://discord.gg/6CSzBmMkjX redirects to https://discord.com/invite/6CSzBmMkjX (redirect |
 | mcp-python-sdk | redirected_link | docs/get-started/installation.md:30 | https://docs.pydantic.dev/ redirects to https://pydantic.dev/docs/ (redirect crosses hosts |
 | mcp-python-sdk | redirected_link | docs/run/opentelemetry.md:59 | https://logfire.pydantic.dev/ redirects to https://logfire-us.pydantic.dev/ (redirect cros |
+| mcp-python-sdk | dead_link | examples/stories/apps/README.md:35 | https://modelcontextprotocol.io/specification/draft/extensions/apps returns 404 |
 | mcp-python-sdk | dead_link | examples/stories/caching/README.md:15 | https://modelcontextprotocol.io/specification/draft/basic/utilities/caching returns 404 |
 | mcp-python-sdk | dead_link | examples/stories/events/README.md:16 | https://modelcontextprotocol.io/specification/draft/extensions/events returns 404 |
-| mcp-python-sdk | dead_link | examples/stories/apps/README.md:35 | https://modelcontextprotocol.io/specification/draft/extensions/apps returns 404 |
 
 ---
 
