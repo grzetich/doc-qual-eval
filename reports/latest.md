@@ -1,22 +1,22 @@
 # Latest run
 
-Run at 2026-09-14T16:46:14+00:00 UTC.
+Run at 2026-09-15T15:26:33+00:00 UTC.
 
-13 patches drafted, 28 findings left for review, 0 findings deliberately not patched.
+14 patches drafted, 28 findings left for review, 0 findings deliberately not patched.
 
 ## Targets
 
 | Target | Type | Revision | Gates |
 | --- | --- | --- | --- |
 | stripe-docs | pages |  | page_fetch:ok |
-| mcp-spec | contribution | 2997f33 | checkout:ok, links:ok, prose:skipped, jsonschema:ok, dedupe:ok |
+| mcp-spec | contribution | cd06237 | checkout:ok, links:ok, prose:skipped, jsonschema:ok, dedupe:ok |
 | mcp-python-sdk | contribution | 9972c21 | checkout:ok, links:ok, prose:skipped, generation:skipped |
 | mcp-typescript-sdk | contribution | b654261 | checkout:ok, links:ok, prose:skipped |
 | stripe | benchmark |  | fetch:ok, artie:error |
 
 ## Drafted patches
 
-In `reports/proposals/2026-09-14/`. Nothing has been opened.
+In `reports/proposals/2026-09-15/`. Nothing has been opened.
 
 | ID | Target | File | Verified by |
 | --- | --- | --- | --- |
@@ -27,12 +27,13 @@ In `reports/proposals/2026-09-14/`. Nothing has been opened.
 | 9781b14cbc | mcp-python-sdk | README.md | Requested https://modelcontextprotocol.io/specification/latest, followed redirec |
 | d676ebedb3 | mcp-python-sdk | docs/get-started/installation.md | Requested https://anyio.readthedocs.io/, followed redirects to https://anyio.rea |
 | 41c25f8393 | mcp-python-sdk | docs/get-started/installation.md | Requested https://opentelemetry-python.readthedocs.io/, followed redirects to ht |
+| b168171a30 | mcp-python-sdk | docs/get-started/installation.md | Requested https://typing-extensions.readthedocs.io/, followed redirects to https |
 | 99d9bc1796 | mcp-python-sdk | docs/get-started/installation.md | Requested https://rich.readthedocs.io/, followed redirects to https://rich.readt |
 | f25a934431 | mcp-python-sdk | docs/servers/uri-templates.md | Requested https://modelcontextprotocol.io/specification/latest/server/resources, |
-| b168171a30 | mcp-python-sdk | docs/get-started/installation.md | Requested https://typing-extensions.readthedocs.io/, followed redirects to https |
 | 9bc777a632 | mcp-python-sdk | examples/stories/apps/README.md | Requested https://github.com/modelcontextprotocol/modelcontextprotocol/issues/21 |
 | 2c67387f85 | mcp-python-sdk | docs/handlers/sampling-and-roots.md | Requested https://github.com/modelcontextprotocol/modelcontextprotocol/issues/25 |
 | b48e0cff86 | mcp-typescript-sdk | README.md | Requested https://modelcontextprotocol.io/docs, followed redirects to https://mo |
+| 3b892475dd | mcp-typescript-sdk | README.md | Requested https://modelcontextprotocol.io/specification/latest, followed redirec |
 
 ## Findings needing a human
 
@@ -45,9 +46,9 @@ Real findings where the correct fix is not derivable from the document.
 | stripe-docs | page_is_an_index | https://docs.stripe.com/api/cash_balance: | page reads as an index rather than a document: 2 links, no code, 100 words. The content an |
 | stripe-docs | page_omits_auth | https://docs.stripe.com/api/cash_balance: | page never mentions authentication, so generated code has to guess the scheme |
 | stripe-docs | page_omits_parameters | https://docs.stripe.com/api/cash_balance: | page names endpoints but documents no parameters, so generated calls are assembled from as |
-| stripe-docs | page_too_thin | https://docs.stripe.com/api/charges: | page carries 171 words, below the 250 word floor for supporting an integration task |
+| stripe-docs | page_too_thin | https://docs.stripe.com/api/charges: | page carries 193 words, below the 250 word floor for supporting an integration task |
 | stripe-docs | page_has_no_examples | https://docs.stripe.com/api/charges: | page contains no code block, so a model working from it writes the call signature from tra |
-| stripe-docs | page_is_an_index | https://docs.stripe.com/api/charges: | page reads as an index rather than a document: 7 links, no code, 171 words. The content an |
+| stripe-docs | page_is_an_index | https://docs.stripe.com/api/charges: | page reads as an index rather than a document: 8 links, no code, 193 words. The content an |
 | stripe-docs | page_omits_auth | https://docs.stripe.com/api/charges: | page never mentions authentication, so generated code has to guess the scheme |
 | stripe-docs | page_omits_parameters | https://docs.stripe.com/api/charges: | page names endpoints but documents no parameters, so generated calls are assembled from as |
 | stripe-docs | page_too_thin | https://docs.stripe.com/api/customers: | page carries 102 words, below the 250 word floor for supporting an integration task |
@@ -62,12 +63,12 @@ Real findings where the correct fix is not derivable from the document.
 | mcp-spec | redirected_link | docs/community/interest-groups/enterprise-managed-authorization.mdx:68 | https://discord.gg/xw55W9Sw5s redirects to https://discord.com/invite/xw55W9Sw5s (redirect |
 | mcp-spec | redirected_link | docs/community/governance.mdx:10 | https://www.lfprojects.org/policies/ redirects to https://lfprojects.org/policies/ (redire |
 | mcp-spec | redirected_link | docs/community/interest-groups/financial-services.mdx:101 | https://discord.gg/NzkBHsrGf redirects to https://discord.com/invite/NzkBHsrGf (redirect c |
-| mcp-python-sdk | redirected_link | docs/get-started/installation.md:30 | https://docs.pydantic.dev/ redirects to https://pydantic.dev/docs/ (redirect crosses hosts |
 | mcp-python-sdk | redirected_link | README.md:21 | https://discord.gg/6CSzBmMkjX redirects to https://discord.com/invite/6CSzBmMkjX (redirect |
-| mcp-python-sdk | redirected_link | docs/run/opentelemetry.md:59 | https://logfire.pydantic.dev/ redirects to https://logfire-us.pydantic.dev/ (redirect cros |
+| mcp-python-sdk | redirected_link | docs/get-started/installation.md:30 | https://docs.pydantic.dev/ redirects to https://pydantic.dev/docs/ (redirect crosses hosts |
 | mcp-python-sdk | dead_link | examples/clients/simple-chatbot/README.md:29 | https://api.groq.com/openai/v1/chat/completions returns 404 |
-| mcp-python-sdk | dead_link | examples/stories/caching/README.md:15 | https://modelcontextprotocol.io/specification/draft/basic/utilities/caching returns 404 |
+| mcp-python-sdk | redirected_link | docs/run/opentelemetry.md:59 | https://logfire.pydantic.dev/ redirects to https://logfire-us.pydantic.dev/ (redirect cros |
 | mcp-python-sdk | dead_link | examples/stories/apps/README.md:35 | https://modelcontextprotocol.io/specification/draft/extensions/apps returns 404 |
+| mcp-python-sdk | dead_link | examples/stories/caching/README.md:15 | https://modelcontextprotocol.io/specification/draft/basic/utilities/caching returns 404 |
 
 ---
 
