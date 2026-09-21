@@ -1,8 +1,8 @@
 # Latest run
 
-Run at 2026-09-20T14:28:14+00:00 UTC.
+Run at 2026-09-21T16:46:32+00:00 UTC.
 
-14 patches drafted, 28 findings left for review, 0 findings deliberately not patched.
+16 patches drafted, 28 findings left for review, 0 findings deliberately not patched.
 
 ## Targets
 
@@ -16,19 +16,21 @@ Run at 2026-09-20T14:28:14+00:00 UTC.
 
 ## Drafted patches
 
-In `reports/proposals/2026-09-20/`. Nothing has been opened.
+In `reports/proposals/2026-09-21/`. Nothing has been opened.
 
 | ID | Target | File | Verified by |
 | --- | --- | --- | --- |
 | 359d824eed | mcp-spec | README.md | Requested https://modelcontextprotocol.io, followed redirects to https://modelco |
 | 87384173a1 | mcp-spec | docs/community/contributing.mdx | Requested https://nodejs.org/, followed redirects to https://nodejs.org/en (HTTP |
+| 859326b50e | mcp-spec | docs/community/interest-groups/primitive-grouping.mdx | Requested https://github.com/modelcontextprotocol/experimental-ext-grouping/blob |
+| 7dc28a2569 | mcp-spec | docs/community/interest-groups/primitive-grouping.mdx | Requested https://github.com/modelcontextprotocol/experimental-ext-grouping, fol |
 | 57cdd41177 | mcp-python-sdk | README.md | Requested https://modelcontextprotocol.io, followed redirects to https://modelco |
-| d99cbd1a33 | mcp-python-sdk | docs/advanced/low-level-server.md | Requested https://modelcontextprotocol.io/specification/latest/basic#json-schema |
 | 9781b14cbc | mcp-python-sdk | README.md | Requested https://modelcontextprotocol.io/specification/latest, followed redirec |
 | d676ebedb3 | mcp-python-sdk | docs/get-started/installation.md | Requested https://anyio.readthedocs.io/, followed redirects to https://anyio.rea |
-| b168171a30 | mcp-python-sdk | docs/get-started/installation.md | Requested https://typing-extensions.readthedocs.io/, followed redirects to https |
 | 41c25f8393 | mcp-python-sdk | docs/get-started/installation.md | Requested https://opentelemetry-python.readthedocs.io/, followed redirects to ht |
+| b168171a30 | mcp-python-sdk | docs/get-started/installation.md | Requested https://typing-extensions.readthedocs.io/, followed redirects to https |
 | 99d9bc1796 | mcp-python-sdk | docs/get-started/installation.md | Requested https://rich.readthedocs.io/, followed redirects to https://rich.readt |
+| d99cbd1a33 | mcp-python-sdk | docs/advanced/low-level-server.md | Requested https://modelcontextprotocol.io/specification/latest/basic#json-schema |
 | f25a934431 | mcp-python-sdk | docs/servers/uri-templates.md | Requested https://modelcontextprotocol.io/specification/latest/server/resources, |
 | 9bc777a632 | mcp-python-sdk | examples/stories/apps/README.md | Requested https://github.com/modelcontextprotocol/modelcontextprotocol/issues/21 |
 | 2c67387f85 | mcp-python-sdk | docs/handlers/sampling-and-roots.md | Requested https://github.com/modelcontextprotocol/modelcontextprotocol/issues/25 |
@@ -65,10 +67,10 @@ Real findings where the correct fix is not derivable from the document.
 | mcp-spec | redirected_link | docs/community/interest-groups/financial-services.mdx:101 | https://discord.gg/NzkBHsrGf redirects to https://discord.com/invite/NzkBHsrGf (redirect c |
 | mcp-python-sdk | redirected_link | README.md:21 | https://discord.gg/6CSzBmMkjX redirects to https://discord.com/invite/6CSzBmMkjX (redirect |
 | mcp-python-sdk | redirected_link | docs/get-started/installation.md:30 | https://docs.pydantic.dev/ redirects to https://pydantic.dev/docs/ (redirect crosses hosts |
-| mcp-python-sdk | redirected_link | docs/run/opentelemetry.md:59 | https://logfire.pydantic.dev/ redirects to https://logfire-us.pydantic.dev/ (redirect cros |
 | mcp-python-sdk | dead_link | examples/clients/simple-chatbot/README.md:29 | https://api.groq.com/openai/v1/chat/completions returns 404 |
-| mcp-python-sdk | dead_link | examples/stories/apps/README.md:35 | https://modelcontextprotocol.io/specification/draft/extensions/apps returns 404 |
+| mcp-python-sdk | redirected_link | docs/run/opentelemetry.md:59 | https://logfire.pydantic.dev/ redirects to https://logfire-us.pydantic.dev/ (redirect cros |
 | mcp-python-sdk | dead_link | examples/stories/caching/README.md:15 | https://modelcontextprotocol.io/specification/draft/basic/utilities/caching returns 404 |
+| mcp-python-sdk | dead_link | examples/stories/apps/README.md:35 | https://modelcontextprotocol.io/specification/draft/extensions/apps returns 404 |
 
 ---
 
