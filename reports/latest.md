@@ -1,6 +1,6 @@
 # Latest run
 
-Run at 2026-09-26T14:52:30+00:00 UTC.
+Run at 2026-09-27T15:30:50+00:00 UTC.
 
 16 patches drafted, 27 findings left for review, 0 findings deliberately not patched.
 
@@ -16,7 +16,7 @@ Run at 2026-09-26T14:52:30+00:00 UTC.
 
 ## Drafted patches
 
-In `reports/proposals/2026-09-26/`. Nothing has been opened.
+In `reports/proposals/2026-09-27/`. Nothing has been opened.
 
 | ID | Target | File | Verified by |
 | --- | --- | --- | --- |
@@ -28,8 +28,8 @@ In `reports/proposals/2026-09-26/`. Nothing has been opened.
 | 9781b14cbc | mcp-python-sdk | README.md | Requested https://modelcontextprotocol.io/specification/latest, followed redirec |
 | d99cbd1a33 | mcp-python-sdk | docs/advanced/low-level-server.md | Requested https://modelcontextprotocol.io/specification/latest/basic#json-schema |
 | d676ebedb3 | mcp-python-sdk | docs/get-started/installation.md | Requested https://anyio.readthedocs.io/, followed redirects to https://anyio.rea |
-| b168171a30 | mcp-python-sdk | docs/get-started/installation.md | Requested https://typing-extensions.readthedocs.io/, followed redirects to https |
 | 41c25f8393 | mcp-python-sdk | docs/get-started/installation.md | Requested https://opentelemetry-python.readthedocs.io/, followed redirects to ht |
+| b168171a30 | mcp-python-sdk | docs/get-started/installation.md | Requested https://typing-extensions.readthedocs.io/, followed redirects to https |
 | 99d9bc1796 | mcp-python-sdk | docs/get-started/installation.md | Requested https://rich.readthedocs.io/, followed redirects to https://rich.readt |
 | f25a934431 | mcp-python-sdk | docs/servers/uri-templates.md | Requested https://modelcontextprotocol.io/specification/latest/server/resources, |
 | 9bc777a632 | mcp-python-sdk | examples/stories/apps/README.md | Requested https://github.com/modelcontextprotocol/modelcontextprotocol/issues/21 |
@@ -59,15 +59,15 @@ Real findings where the correct fix is not derivable from the document.
 | stripe-docs | page_omits_auth | https://docs.stripe.com/api/customers: | page never mentions authentication, so generated code has to guess the scheme |
 | stripe-docs | page_omits_parameters | https://docs.stripe.com/api/customers: | page names endpoints but documents no parameters, so generated calls are assembled from as |
 | mcp-spec | redirected_link | docs/community/communication.mdx:12 | https://discord.gg/6CSzBmMkjX redirects to https://discord.com/invite/6CSzBmMkjX (redirect |
-| mcp-spec | redirected_link | docs/community/contributing.mdx:328 | https://mintlify.com/ redirects to https://www.mintlify.com/ (redirect crosses hosts, mint |
 | mcp-spec | dead_link | docs/community/contributing.mdx:107 | https://github.com/YOUR-USERNAME/modelcontextprotocol.git returns 404 |
+| mcp-spec | redirected_link | docs/community/contributing.mdx:328 | https://mintlify.com/ redirects to https://www.mintlify.com/ (redirect crosses hosts, mint |
 | mcp-spec | redirected_link | docs/community/interest-groups/auth.mdx:18 | 3 occurrences of the same pattern in docs/community/interest-groups/auth.mdx: https://www. |
 | mcp-spec | redirected_link | docs/community/interest-groups/enterprise-managed-authorization.mdx:68 | https://discord.gg/xw55W9Sw5s redirects to https://discord.com/invite/xw55W9Sw5s (redirect |
 | mcp-spec | redirected_link | docs/community/governance.mdx:10 | https://www.lfprojects.org/policies/ redirects to https://lfprojects.org/policies/ (redire |
 | mcp-python-sdk | redirected_link | README.md:21 | https://discord.gg/6CSzBmMkjX redirects to https://discord.com/invite/6CSzBmMkjX (redirect |
 | mcp-python-sdk | redirected_link | docs/get-started/installation.md:30 | https://docs.pydantic.dev/ redirects to https://pydantic.dev/docs/ (redirect crosses hosts |
-| mcp-python-sdk | redirected_link | docs/run/opentelemetry.md:59 | https://logfire.pydantic.dev/ redirects to https://logfire-us.pydantic.dev/ (redirect cros |
 | mcp-python-sdk | dead_link | examples/clients/simple-chatbot/README.md:29 | https://api.groq.com/openai/v1/chat/completions returns 404 |
+| mcp-python-sdk | redirected_link | docs/run/opentelemetry.md:59 | https://logfire.pydantic.dev/ redirects to https://logfire-us.pydantic.dev/ (redirect cros |
 | mcp-python-sdk | dead_link | examples/stories/apps/README.md:35 | https://modelcontextprotocol.io/specification/draft/extensions/apps returns 404 |
 | mcp-python-sdk | dead_link | examples/stories/caching/README.md:15 | https://modelcontextprotocol.io/specification/draft/basic/utilities/caching returns 404 |
 
