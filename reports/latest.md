@@ -1,6 +1,6 @@
 # Latest run
 
-Run at 2026-09-27T15:30:50+00:00 UTC.
+Run at 2026-09-28T18:24:58+00:00 UTC.
 
 16 patches drafted, 27 findings left for review, 0 findings deliberately not patched.
 
@@ -11,12 +11,12 @@ Run at 2026-09-27T15:30:50+00:00 UTC.
 | stripe-docs | pages |  | page_fetch:ok |
 | mcp-spec | contribution | ab3a39c | checkout:ok, links:ok, prose:skipped, jsonschema:ok, dedupe:ok |
 | mcp-python-sdk | contribution | f1b6589 | checkout:ok, links:ok, prose:skipped, generation:skipped |
-| mcp-typescript-sdk | contribution | 7f7a94c | checkout:ok, links:ok, prose:skipped |
+| mcp-typescript-sdk | contribution | ef39308 | checkout:ok, links:ok, prose:skipped |
 | stripe | benchmark |  | fetch:ok, artie:error |
 
 ## Drafted patches
 
-In `reports/proposals/2026-09-27/`. Nothing has been opened.
+In `reports/proposals/2026-09-28/`. Nothing has been opened.
 
 | ID | Target | File | Verified by |
 | --- | --- | --- | --- |
@@ -26,11 +26,11 @@ In `reports/proposals/2026-09-27/`. Nothing has been opened.
 | 7dc28a2569 | mcp-spec | docs/community/interest-groups/primitive-grouping.mdx | Requested https://github.com/modelcontextprotocol/experimental-ext-grouping, fol |
 | 57cdd41177 | mcp-python-sdk | README.md | Requested https://modelcontextprotocol.io, followed redirects to https://modelco |
 | 9781b14cbc | mcp-python-sdk | README.md | Requested https://modelcontextprotocol.io/specification/latest, followed redirec |
-| d99cbd1a33 | mcp-python-sdk | docs/advanced/low-level-server.md | Requested https://modelcontextprotocol.io/specification/latest/basic#json-schema |
 | d676ebedb3 | mcp-python-sdk | docs/get-started/installation.md | Requested https://anyio.readthedocs.io/, followed redirects to https://anyio.rea |
-| 41c25f8393 | mcp-python-sdk | docs/get-started/installation.md | Requested https://opentelemetry-python.readthedocs.io/, followed redirects to ht |
-| b168171a30 | mcp-python-sdk | docs/get-started/installation.md | Requested https://typing-extensions.readthedocs.io/, followed redirects to https |
 | 99d9bc1796 | mcp-python-sdk | docs/get-started/installation.md | Requested https://rich.readthedocs.io/, followed redirects to https://rich.readt |
+| b168171a30 | mcp-python-sdk | docs/get-started/installation.md | Requested https://typing-extensions.readthedocs.io/, followed redirects to https |
+| 41c25f8393 | mcp-python-sdk | docs/get-started/installation.md | Requested https://opentelemetry-python.readthedocs.io/, followed redirects to ht |
+| d99cbd1a33 | mcp-python-sdk | docs/advanced/low-level-server.md | Requested https://modelcontextprotocol.io/specification/latest/basic#json-schema |
 | f25a934431 | mcp-python-sdk | docs/servers/uri-templates.md | Requested https://modelcontextprotocol.io/specification/latest/server/resources, |
 | 9bc777a632 | mcp-python-sdk | examples/stories/apps/README.md | Requested https://github.com/modelcontextprotocol/modelcontextprotocol/issues/21 |
 | 2c67387f85 | mcp-python-sdk | docs/handlers/sampling-and-roots.md | Requested https://github.com/modelcontextprotocol/modelcontextprotocol/issues/25 |
