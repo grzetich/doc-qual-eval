@@ -1,27 +1,28 @@
 # Latest run
 
-Run at 2026-10-02T16:28:50+00:00 UTC.
+Run at 2026-10-03T15:02:33+00:00 UTC.
 
-15 patches drafted, 27 findings left for review, 0 findings deliberately not patched.
+16 patches drafted, 27 findings left for review, 0 findings deliberately not patched.
 
 ## Targets
 
 | Target | Type | Revision | Gates |
 | --- | --- | --- | --- |
 | stripe-docs | pages |  | page_fetch:ok |
-| mcp-spec | contribution | 3098fe9 | checkout:ok, links:ok, prose:skipped, jsonschema:ok, dedupe:ok |
-| mcp-python-sdk | contribution | 0acea60 | checkout:ok, links:ok, prose:skipped, generation:skipped |
-| mcp-typescript-sdk | contribution | 40f8f4e | checkout:ok, links:ok, prose:skipped |
+| mcp-spec | contribution | 75db1e9 | checkout:ok, links:ok, prose:skipped, jsonschema:ok, dedupe:ok |
+| mcp-python-sdk | contribution | 2118f14 | checkout:ok, links:ok, prose:skipped, generation:skipped |
+| mcp-typescript-sdk | contribution | 8aabbdc | checkout:ok, links:ok, prose:skipped |
 | stripe | benchmark |  | fetch:ok, artie:error |
 
 ## Drafted patches
 
-In `reports/proposals/2026-10-02/`. Nothing has been opened.
+In `reports/proposals/2026-10-03/`. Nothing has been opened.
 
 | ID | Target | File | Verified by |
 | --- | --- | --- | --- |
 | 359d824eed | mcp-spec | README.md | Requested https://modelcontextprotocol.io, followed redirects to https://modelco |
 | dc5e90fb36 | mcp-spec | docs/community/contributing.mdx | Requested https://nodejs.org/, followed redirects to https://nodejs.org/en (HTTP |
+| 859326b50e | mcp-spec | docs/community/interest-groups/primitive-grouping.mdx | Requested https://github.com/modelcontextprotocol/experimental-ext-grouping/blob |
 | 7dc28a2569 | mcp-spec | docs/community/interest-groups/primitive-grouping.mdx | Requested https://github.com/modelcontextprotocol/experimental-ext-grouping, fol |
 | 0d5c8a702c | mcp-python-sdk | README.md | Requested https://modelcontextprotocol.io, followed redirects to https://modelco |
 | a2cf5c22a8 | mcp-python-sdk | README.md | Requested https://modelcontextprotocol.io/specification/latest, followed redirec |
@@ -33,8 +34,8 @@ In `reports/proposals/2026-10-02/`. Nothing has been opened.
 | f25a934431 | mcp-python-sdk | docs/servers/uri-templates.md | Requested https://modelcontextprotocol.io/specification/latest/server/resources, |
 | 9bc777a632 | mcp-python-sdk | examples/stories/apps/README.md | Requested https://github.com/modelcontextprotocol/modelcontextprotocol/issues/21 |
 | 2c67387f85 | mcp-python-sdk | docs/handlers/sampling-and-roots.md | Requested https://github.com/modelcontextprotocol/modelcontextprotocol/issues/25 |
-| 3b892475dd | mcp-typescript-sdk | README.md | Requested https://modelcontextprotocol.io/specification/latest, followed redirec |
 | b48e0cff86 | mcp-typescript-sdk | README.md | Requested https://modelcontextprotocol.io/docs, followed redirects to https://mo |
+| 3b892475dd | mcp-typescript-sdk | README.md | Requested https://modelcontextprotocol.io/specification/latest, followed redirec |
 
 ## Findings needing a human
 
@@ -58,11 +59,11 @@ Real findings where the correct fix is not derivable from the document.
 | stripe-docs | page_omits_auth | https://docs.stripe.com/api/customers: | page never mentions authentication, so generated code has to guess the scheme |
 | stripe-docs | page_omits_parameters | https://docs.stripe.com/api/customers: | page names endpoints but documents no parameters, so generated calls are assembled from as |
 | mcp-spec | redirected_link | docs/community/communication.mdx:12 | https://discord.gg/6CSzBmMkjX redirects to https://discord.com/invite/6CSzBmMkjX (redirect |
-| mcp-spec | redirected_link | docs/community/contributing.mdx:328 | https://mintlify.com/ redirects to https://www.mintlify.com/ (redirect crosses hosts, mint |
 | mcp-spec | dead_link | docs/community/contributing.mdx:107 | https://github.com/YOUR-USERNAME/modelcontextprotocol.git returns 404 |
+| mcp-spec | redirected_link | docs/community/contributing.mdx:328 | https://mintlify.com/ redirects to https://www.mintlify.com/ (redirect crosses hosts, mint |
 | mcp-spec | redirected_link | docs/community/interest-groups/auth.mdx:18 | 3 occurrences of the same pattern in docs/community/interest-groups/auth.mdx: https://www. |
-| mcp-spec | redirected_link | docs/community/governance.mdx:10 | https://www.lfprojects.org/policies/ redirects to https://lfprojects.org/policies/ (redire |
 | mcp-spec | redirected_link | docs/community/interest-groups/enterprise-managed-authorization.mdx:68 | https://discord.gg/xw55W9Sw5s redirects to https://discord.com/invite/xw55W9Sw5s (redirect |
+| mcp-spec | redirected_link | docs/community/governance.mdx:10 | https://www.lfprojects.org/policies/ redirects to https://lfprojects.org/policies/ (redire |
 | mcp-python-sdk | redirected_link | docs/get-started/installation.md:30 | https://docs.pydantic.dev/ redirects to https://pydantic.dev/docs/ (redirect crosses hosts |
 | mcp-python-sdk | redirected_link | docs/run/opentelemetry.md:59 | https://logfire.pydantic.dev/ redirects to https://logfire-us.pydantic.dev/ (redirect cros |
 | mcp-python-sdk | dead_link | examples/clients/simple-chatbot/README.md:29 | https://api.groq.com/openai/v1/chat/completions returns 404 |
