@@ -1,6 +1,6 @@
 # Latest run
 
-Run at 2026-10-21T15:49:15+00:00 UTC.
+Run at 2026-10-22T15:46:58+00:00 UTC.
 
 15 patches drafted, 26 findings left for review, 0 findings deliberately not patched.
 
@@ -16,7 +16,7 @@ Run at 2026-10-21T15:49:15+00:00 UTC.
 
 ## Drafted patches
 
-In `reports/proposals/2026-10-21/`. Nothing has been opened.
+In `reports/proposals/2026-10-22/`. Nothing has been opened.
 
 | ID | Target | File | Verified by |
 | --- | --- | --- | --- |
@@ -27,14 +27,14 @@ In `reports/proposals/2026-10-21/`. Nothing has been opened.
 | d99cbd1a33 | mcp-python-sdk | docs/advanced/low-level-server.md | Requested https://modelcontextprotocol.io/specification/latest/basic#json-schema |
 | 78f0094b36 | mcp-python-sdk | docs/advanced/skills.md | Requested https://agentskills.io/, followed redirects to https://agentskills.io/ |
 | d676ebedb3 | mcp-python-sdk | docs/get-started/installation.md | Requested https://anyio.readthedocs.io/, followed redirects to https://anyio.rea |
-| b168171a30 | mcp-python-sdk | docs/get-started/installation.md | Requested https://typing-extensions.readthedocs.io/, followed redirects to https |
 | 41c25f8393 | mcp-python-sdk | docs/get-started/installation.md | Requested https://opentelemetry-python.readthedocs.io/, followed redirects to ht |
+| b168171a30 | mcp-python-sdk | docs/get-started/installation.md | Requested https://typing-extensions.readthedocs.io/, followed redirects to https |
 | 99d9bc1796 | mcp-python-sdk | docs/get-started/installation.md | Requested https://rich.readthedocs.io/, followed redirects to https://rich.readt |
 | f25a934431 | mcp-python-sdk | docs/servers/uri-templates.md | Requested https://modelcontextprotocol.io/specification/latest/server/resources, |
 | 9bc777a632 | mcp-python-sdk | examples/stories/apps/README.md | Requested https://github.com/modelcontextprotocol/modelcontextprotocol/issues/21 |
 | 2c67387f85 | mcp-python-sdk | docs/handlers/sampling-and-roots.md | Requested https://github.com/modelcontextprotocol/modelcontextprotocol/issues/25 |
-| 2d67178b6a | mcp-typescript-sdk | README.md | Requested https://modelcontextprotocol.io/specification/latest, followed redirec |
 | a5b8a997e4 | mcp-typescript-sdk | README.md | Requested https://modelcontextprotocol.io/docs, followed redirects to https://mo |
+| 2d67178b6a | mcp-typescript-sdk | README.md | Requested https://modelcontextprotocol.io/specification/latest, followed redirec |
 
 ## Findings needing a human
 
@@ -64,10 +64,10 @@ Real findings where the correct fix is not derivable from the document.
 | mcp-spec | redirected_link | docs/community/interest-groups/enterprise-managed-authorization.mdx:68 | https://discord.gg/xw55W9Sw5s redirects to https://discord.com/invite/xw55W9Sw5s (redirect |
 | mcp-spec | redirected_link | docs/community/governance.mdx:10 | https://www.lfprojects.org/policies/ redirects to https://lfprojects.org/policies/ (redire |
 | mcp-python-sdk | redirected_link | docs/get-started/installation.md:30 | https://docs.pydantic.dev/ redirects to https://pydantic.dev/docs/ (redirect crosses hosts |
-| mcp-python-sdk | dead_link | examples/clients/simple-chatbot/README.md:29 | https://api.groq.com/openai/v1/chat/completions returns 404 |
 | mcp-python-sdk | redirected_link | docs/run/opentelemetry.md:59 | https://logfire.pydantic.dev/ redirects to https://logfire-us.pydantic.dev/ (redirect cros |
-| mcp-python-sdk | dead_link | examples/stories/caching/README.md:15 | https://modelcontextprotocol.io/specification/draft/basic/utilities/caching returns 404 |
+| mcp-python-sdk | dead_link | examples/clients/simple-chatbot/README.md:29 | https://api.groq.com/openai/v1/chat/completions returns 404 |
 | mcp-python-sdk | dead_link | examples/stories/apps/README.md:35 | https://modelcontextprotocol.io/specification/draft/extensions/apps returns 404 |
+| mcp-python-sdk | dead_link | examples/stories/caching/README.md:15 | https://modelcontextprotocol.io/specification/draft/basic/utilities/caching returns 404 |
 
 ---
 
