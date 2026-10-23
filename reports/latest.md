@@ -1,6 +1,6 @@
 # Latest run
 
-Run at 2026-10-22T15:46:58+00:00 UTC.
+Run at 2026-10-23T15:38:02+00:00 UTC.
 
 15 patches drafted, 26 findings left for review, 0 findings deliberately not patched.
 
@@ -9,14 +9,14 @@ Run at 2026-10-22T15:46:58+00:00 UTC.
 | Target | Type | Revision | Gates |
 | --- | --- | --- | --- |
 | stripe-docs | pages |  | page_fetch:ok |
-| mcp-spec | contribution | 80041ab | checkout:ok, links:ok, prose:skipped, jsonschema:ok, dedupe:ok |
+| mcp-spec | contribution | dae694f | checkout:ok, links:ok, prose:skipped, jsonschema:ok, dedupe:ok |
 | mcp-python-sdk | contribution | 2af9e30 | checkout:ok, links:ok, prose:skipped, generation:skipped |
-| mcp-typescript-sdk | contribution | c05225a | checkout:ok, links:ok, prose:skipped |
+| mcp-typescript-sdk | contribution | 9adb8d5 | checkout:ok, links:ok, prose:skipped |
 | stripe | benchmark |  | fetch:ok, artie:error |
 
 ## Drafted patches
 
-In `reports/proposals/2026-10-22/`. Nothing has been opened.
+In `reports/proposals/2026-10-23/`. Nothing has been opened.
 
 | ID | Target | File | Verified by |
 | --- | --- | --- | --- |
@@ -24,11 +24,11 @@ In `reports/proposals/2026-10-22/`. Nothing has been opened.
 | dc5e90fb36 | mcp-spec | docs/community/contributing.mdx | Requested https://nodejs.org/, followed redirects to https://nodejs.org/en (HTTP |
 | 0d5c8a702c | mcp-python-sdk | README.md | Requested https://modelcontextprotocol.io, followed redirects to https://modelco |
 | a2cf5c22a8 | mcp-python-sdk | README.md | Requested https://modelcontextprotocol.io/specification/latest, followed redirec |
-| d99cbd1a33 | mcp-python-sdk | docs/advanced/low-level-server.md | Requested https://modelcontextprotocol.io/specification/latest/basic#json-schema |
 | 78f0094b36 | mcp-python-sdk | docs/advanced/skills.md | Requested https://agentskills.io/, followed redirects to https://agentskills.io/ |
+| d99cbd1a33 | mcp-python-sdk | docs/advanced/low-level-server.md | Requested https://modelcontextprotocol.io/specification/latest/basic#json-schema |
 | d676ebedb3 | mcp-python-sdk | docs/get-started/installation.md | Requested https://anyio.readthedocs.io/, followed redirects to https://anyio.rea |
-| 41c25f8393 | mcp-python-sdk | docs/get-started/installation.md | Requested https://opentelemetry-python.readthedocs.io/, followed redirects to ht |
 | b168171a30 | mcp-python-sdk | docs/get-started/installation.md | Requested https://typing-extensions.readthedocs.io/, followed redirects to https |
+| 41c25f8393 | mcp-python-sdk | docs/get-started/installation.md | Requested https://opentelemetry-python.readthedocs.io/, followed redirects to ht |
 | 99d9bc1796 | mcp-python-sdk | docs/get-started/installation.md | Requested https://rich.readthedocs.io/, followed redirects to https://rich.readt |
 | f25a934431 | mcp-python-sdk | docs/servers/uri-templates.md | Requested https://modelcontextprotocol.io/specification/latest/server/resources, |
 | 9bc777a632 | mcp-python-sdk | examples/stories/apps/README.md | Requested https://github.com/modelcontextprotocol/modelcontextprotocol/issues/21 |
