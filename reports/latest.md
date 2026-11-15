@@ -1,8 +1,8 @@
 # Latest run
 
-Run at 2026-11-14T16:50:48+00:00 UTC.
+Run at 2026-11-15T17:32:55+00:00 UTC.
 
-14 patches drafted, 24 findings left for review, 0 findings deliberately not patched.
+15 patches drafted, 24 findings left for review, 0 findings deliberately not patched.
 
 ## Targets
 
@@ -16,7 +16,7 @@ Run at 2026-11-14T16:50:48+00:00 UTC.
 
 ## Drafted patches
 
-In `reports/proposals/2026-11-14/`. Nothing has been opened.
+In `reports/proposals/2026-11-15/`. Nothing has been opened.
 
 | ID | Target | File | Verified by |
 | --- | --- | --- | --- |
@@ -30,10 +30,11 @@ In `reports/proposals/2026-11-14/`. Nothing has been opened.
 | b168171a30 | mcp-python-sdk | docs/get-started/installation.md | Requested https://typing-extensions.readthedocs.io/, followed redirects to https |
 | 99d9bc1796 | mcp-python-sdk | docs/get-started/installation.md | Requested https://rich.readthedocs.io/, followed redirects to https://rich.readt |
 | f25a934431 | mcp-python-sdk | docs/servers/uri-templates.md | Requested https://modelcontextprotocol.io/specification/latest/server/resources, |
-| 9bc777a632 | mcp-python-sdk | examples/stories/apps/README.md | Requested https://github.com/modelcontextprotocol/modelcontextprotocol/issues/21 |
 | 2c67387f85 | mcp-python-sdk | docs/handlers/sampling-and-roots.md | Requested https://github.com/modelcontextprotocol/modelcontextprotocol/issues/25 |
-| a5b8a997e4 | mcp-typescript-sdk | README.md | Requested https://modelcontextprotocol.io/docs, followed redirects to https://mo |
+| 9bc777a632 | mcp-python-sdk | examples/stories/apps/README.md | Requested https://github.com/modelcontextprotocol/modelcontextprotocol/issues/21 |
 | 2d67178b6a | mcp-typescript-sdk | README.md | Requested https://modelcontextprotocol.io/specification/latest, followed redirec |
+| a5b8a997e4 | mcp-typescript-sdk | README.md | Requested https://modelcontextprotocol.io/docs, followed redirects to https://mo |
+| 2fa5d50fba | mcp-typescript-sdk | docs/advanced/opentelemetry.md | Requested https://modelcontextprotocol.io/community/seps/414-request-meta, follo |
 
 ## Findings needing a human
 
