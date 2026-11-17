@@ -1,6 +1,6 @@
 # Latest run
 
-Run at 2026-11-16T20:48:04+00:00 UTC.
+Run at 2026-11-17T19:35:27+00:00 UTC.
 
 15 patches drafted, 24 findings left for review, 0 findings deliberately not patched.
 
@@ -9,21 +9,21 @@ Run at 2026-11-16T20:48:04+00:00 UTC.
 | Target | Type | Revision | Gates |
 | --- | --- | --- | --- |
 | stripe-docs | pages |  | page_fetch:ok |
-| mcp-spec | contribution | de3550c | checkout:ok, links:ok, prose:skipped, jsonschema:ok, dedupe:ok |
+| mcp-spec | contribution | d4b3172 | checkout:ok, links:ok, prose:skipped, jsonschema:ok, dedupe:ok |
 | mcp-python-sdk | contribution | 77001c9 | checkout:ok, links:ok, prose:skipped, generation:skipped |
 | mcp-typescript-sdk | contribution | 919bb8e | checkout:ok, links:ok, prose:skipped |
 | stripe | benchmark |  | fetch:ok, artie:error |
 
 ## Drafted patches
 
-In `reports/proposals/2026-11-16/`. Nothing has been opened.
+In `reports/proposals/2026-11-17/`. Nothing has been opened.
 
 | ID | Target | File | Verified by |
 | --- | --- | --- | --- |
 | 359d824eed | mcp-spec | README.md | Requested https://modelcontextprotocol.io, followed redirects to https://modelco |
+| a2cf5c22a8 | mcp-python-sdk | README.md | Requested https://modelcontextprotocol.io/specification/latest, followed redirec |
 | 0d5c8a702c | mcp-python-sdk | README.md | Requested https://modelcontextprotocol.io, followed redirects to https://modelco |
 | d99cbd1a33 | mcp-python-sdk | docs/advanced/low-level-server.md | Requested https://modelcontextprotocol.io/specification/latest/basic#json-schema |
-| a2cf5c22a8 | mcp-python-sdk | README.md | Requested https://modelcontextprotocol.io/specification/latest, followed redirec |
 | 78f0094b36 | mcp-python-sdk | docs/advanced/skills.md | Requested https://agentskills.io/, followed redirects to https://agentskills.io/ |
 | d676ebedb3 | mcp-python-sdk | docs/get-started/installation.md | Requested https://anyio.readthedocs.io/, followed redirects to https://anyio.rea |
 | 41c25f8393 | mcp-python-sdk | docs/get-started/installation.md | Requested https://opentelemetry-python.readthedocs.io/, followed redirects to ht |
